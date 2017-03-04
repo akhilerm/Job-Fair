@@ -3,6 +3,7 @@
         <div class="section"></div>
         <div class="section">
             <?php 
+                session_start();  
                 if(isset($_SESSION['MESSAGE']))
                 {
                   echo  $_SESSION['MESSAGE'];
