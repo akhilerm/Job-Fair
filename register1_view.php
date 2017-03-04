@@ -14,12 +14,6 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input  id="full_name" type="text" class="validate">
-                            <label for="first_name">Full Name</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
                             <input id="icon_telephone" type="tel" class="validate">
                             <label for="icon_telephone">Mobile Number</label>
                         </div>
@@ -37,6 +31,32 @@
                                 <option value="" disabled selected>Select Stream</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="row">
+                            <div class="input-field col s12">
+                                <label>Year of pass</label>
+                                    <br>
+                                <p style="margin-left:-13px;">
+                                  <input name="group1" type="radio" id="test1">
+                                  <label for="test1">2016</label>
+
+                                  <input name="group1" type="radio" id="test2">
+                                  <label for="test2">2017</label>
+                                </p>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select style="display: block;border: 1px solid #9e9e9e" id="semester">
+                                 <option value="" disabled selected>Select Semester</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="full_name" type="text" class="validate">
+                        <label for="first_name" class="">College</label>
                     </div>
                     <br />
                     <center>
