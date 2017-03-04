@@ -1,4 +1,5 @@
 <?php
+	//url should be /index.php?switch=login
     session_start();
     include("header.php");
 

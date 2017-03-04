@@ -4,12 +4,20 @@
       <div class="section"></div>
 
       <h5 class="colGreen jobportalHeading">JOB PORTAL</h5>
-      <div class="section"></div>
+      <div class="section">
+        <?php 
+          if(isset($_SESSION['MESSAGE']))
+          {
+            echo  $_SESSION['MESSAGE'];
+            unset($_SESSION['MESSAGE']);
+          }
+        ?>
+       </div> 
 
       <div class="container">
         <div class="z-depth-1 white  row" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;">
 
-          <form class="col s12" method="post">
+          <form class="col s12" method="post" action="login.php">
             <div class='row'>
               <div class='col s12'>
                   <h5 class="colGreen loginHead">Login</h5>
