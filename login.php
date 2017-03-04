@@ -12,7 +12,7 @@
 		if($verify==-1 || $verify != $password)
 		{
 			$_SESSION['MESSAGE']='This combination of email and password does not exist.';
-			header("location:index.php?switch=login");
+			header("location:index.php");
 			return;
 		}
 		else
@@ -25,7 +25,7 @@
 	else
 	{
 		$_SESSION['MESSAGE']="ALL FIELDS ARE MANDATORY!";
-		header("location:index.php?switch=login");	
+		header("location:index.php");	
 
 	}
 

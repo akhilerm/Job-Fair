@@ -13,7 +13,7 @@
 <body>
     <header>    
       <nav class="white navBar" role="navigation">
-        <div class="nav-wrapper"><a id="logo-container" href="index.php?switch=login" class="brandLogo brand-logo">Logo</a>
+        <div class="nav-wrapper"><a id="logo-container" href="index.php" class="brandLogo brand-logo">Logo</a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#" class="colGreen">Navbar Link</a></li>
           </ul>
