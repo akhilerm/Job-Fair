@@ -11,11 +11,10 @@
 		unset($_SESSION['LOGIN']);
 		unset($_SESSION['PASSWORD']);
 		unset($_SESSION['USER_ID']);
-		return;
 	}
 	else
 	{
-		$_SESSION['MESSAGE']="LOGIN FAILED".$_SESSION['LOGIN']." ".$_SESSION['PASSWORD']." ".$_SESSION['USER_ID'];
+		$_SESSION['MESSAGE']="LOGIN FAILED";
 		header("location:index.php");
 	}	
 
