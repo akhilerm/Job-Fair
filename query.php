@@ -20,14 +20,13 @@
 
 	function fetch_by_id($user_id,$con)
 	{
-		$query="select * from user where id=$userid";
+		$query="select * from user where id=$user_id";
 		$result=$con->query($query);
 		if($result)
 		{
 			if($result->num_rows>0)
 			{
 				$row=$result->fetch_assoc();
-				$_SESSION['USER_ID']=$row[id];
 				return $row['password'];
 			}
 			else

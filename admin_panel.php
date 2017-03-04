@@ -5,7 +5,7 @@
 	
 	$verify=fetch_by_id(($_SESSION['USER_ID']),$con);
 
-	if($_SESSION['LOGIN']==2 && $_SESSION['PASSWORD']==$verify  && $_SESSION['USER_ID']=='') //manually enter userid value values
+	if($_SESSION['LOGIN']==2 && $_SESSION['PASSWORD']==$verify  && $_SESSION['USER_ID']==10001) //manually enter userid value values
 	{
 		include("admin_panel_view.php");
 		unset($_SESSION['LOGIN']);
@@ -15,7 +15,7 @@
 	}
 	else
 	{
-		$_SESSION['MESSAGE']="LOGIN FAILED";
+		$_SESSION['MESSAGE']="LOGIN FAILED".$_SESSION['LOGIN']." ".$_SESSION['PASSWORD']." ".$_SESSION['USER_ID'];
 		header("location:index.php");
 	}	
 

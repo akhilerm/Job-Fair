@@ -10,7 +10,7 @@
 	{
 		$password=sha1($password);
 		$verify=fetch_user($email,$password,$con);
-		if(($verify == $password) && ($email=='pranavshenoy06@gmail.com'))
+		if(($verify == $password) && ($email=='pranavshenoy06@gmail.com'))          //admin panel
 		{
 			$_SESSION['LOGIN']=2;               //2  for admin
 			$_SESSION['PASSWORD']=$password;
