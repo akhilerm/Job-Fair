@@ -1,7 +1,3 @@
-
-
-
-
 <main>
            <center>
      
@@ -43,7 +39,7 @@
                 <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect colGreenbg'>Login</button>
               </div>
             </center>
-            <a class='colGreen' href="#!">Create account</a>
+            <a class='colGreen' href="index.php?switch=register" >Create account</a>
               <br>
           </form>
         </div>

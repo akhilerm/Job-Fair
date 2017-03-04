@@ -7,7 +7,7 @@
      
       <div class="section"></div>
 
-      <h5 class="colGreen jobportalHeading">JOB PORTAL</h5>
+      <h5 class="colGreen jobportalHeading">REGISTRATION</h5>
       <div class="section"></div>
 
       <div class="container">
