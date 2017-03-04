@@ -35,46 +35,27 @@
                 </div>
             </div>
 
-              
-              
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' />
-                <label for='email'>Enter your email</label>
+            <div class="row">
+               <div class="input-field col s12">
+                <select>
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label>Select Course</label>
               </div>
-            </div>
-
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Enter password</label>
-              </div>
-       
-            </div>
               
-              <div class='row'>
-              <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Retype password</label>
-              </div>
-       
-            </div>
               
-            <div class='row'>
-              <div class='input-field col s12'>
-                 <label style="margin-bottom:10px;">DOB</label>   
-                  <br>
               
-               <input type="date" class="datepicker"> 
+            </div>  
+              
+           
             
-              </div>
-       
-            </div>
-
             <br />
             <center>
               <div class='row'>
-                <a type='submit' href="index.php?switch=next" name='btn_login'   class='col s12 btn btn-large waves-effect colGreenbg'>Next</a>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect colGreenbg'>Register</button>
               </div>
             </center>
             

@@ -3,7 +3,7 @@
      
       <div class="section"></div>
 
-      <h5 class="colGreen jobportalHeading">JOB PORTAL</h5>
+     
       <div class="section">
         <?php 
           if(isset($_SESSION['MESSAGE']))
@@ -15,7 +15,7 @@
        </div> 
 
       <div class="container">
-        <div class="z-depth-1 white  row" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;">
+        <div class="formcard z-depth-1 white  row" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;">
 
           <form class="col s12" method="post" action="login.php">
             <div class='row'>
@@ -36,9 +36,7 @@
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Enter your password</label>
               </div>
-              <label style='float: right;'>
-								<a class='colGreen' href='#!'><b>Forgot Password?</b></a>
-							</label>
+             
             </div>
 
             <br />
