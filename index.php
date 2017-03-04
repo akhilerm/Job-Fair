@@ -1,13 +1,12 @@
 <?php
 	//url should be /index.php?switch=login
-    session_start();
     include("header.php");
 
     if(!empty($_GET['switch']))
     {
     	if($_GET['switch']=='register')
         	include("register_view.php");
-        else if($_GET['switch']=='next')
+      else if($_GET['switch']=='next')
         	include("register1_view.php");
     }
     else 

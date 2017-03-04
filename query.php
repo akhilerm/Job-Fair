@@ -36,6 +36,61 @@
 			return -1;
 	}
 
-	header('location:index.php');
+	function fetch_courses($con)
+	{
+		$query="select * from course";
+		$result=$con->query($query);
+		if($result)
+		{
+			if($result->num_rows>0)
+			{
+				$string='';
+				while($row= $result->fetch_assoc())
+					$string.='<option value='.$row['id'].'>'.$row['course_name'].'</option>';
+				return $string;
+			}
+			else
+				return -1;
+		}
+		else
+			return -1;
+	}
 
+	/*function fetch_course_id($course_name,$con)
+	{
+		$query= "select id from course where course_name='$course_name'";
+		$result=$con->query($query);
+		if($result)
+		{
+			if($result->num_rows>0)
+			{
+				$row= $result->fetch_assoc();
+				return $row['id'];
+			}
+			else
+				return -1;
+		}
+		else
+			return -1;
+	}*/
+
+	function fetch_stream($course_id,$con)
+	{
+		$query= 'select * from stream where course_id='.$course_id;
+		$result=$con->query($query);
+		if($result)
+		{
+			if($result->num_rows>0)
+			{
+				$string='';
+				while($row= $result->fetch_assoc())
+					$string.='<option value='.$row['id'].'>'.$row['stream_name'].'</option>';
+				return $string;
+			}
+			else
+				return -1;
+		}
+		else
+			return -1;
+	}
 ?>

@@ -1,0 +1,5 @@
+<?php
+//query to insert
+
+
+?>
