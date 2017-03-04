@@ -1,7 +1,9 @@
 <?php
 	session_start();
 	require_once('db_connect.php');
-	$verify=fetch_by_id($_SESSION['USER_ID']),$con);
+	require_once('query.php');
+	
+	$verify=fetch_by_id(($_SESSION['USER_ID']),$con);
 
 	if($_SESSION['LOGIN']==2 && $_SESSION['PASSWORD']==$verify  && $_SESSION['USER_ID']=='') //manually enter userid value values
 	{
