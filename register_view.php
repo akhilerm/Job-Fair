@@ -13,7 +13,7 @@
       <div class="container ">
         <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;width:95%;">
 
-          <form class="col s12" method="post">
+          <form class="col s12" method="post" action="index.php?switch=next">
             <div class='row'>
               <div class='col s12'>
                   <h5 class="colGreen loginHead">Registration</h5>
@@ -74,7 +74,7 @@
             <br />
             <center>
               <div class='row'>
-                <a type='submit' href="index.php?switch=next" name='btn_login'   class='col s12 btn btn-large waves-effect colGreenbg'>Next</a>
+                <button type='submit'  name='btn_login'   class='col s12 btn btn-large waves-effect colGreenbg'>Next</button>
               </div>
             </center>
             

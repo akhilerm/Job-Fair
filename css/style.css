@@ -82,3 +82,10 @@ input:not([type]).validate + label, input[type=text].validate + label, input[typ
         width:98%!important;
     }
 }
+
+#stream:focus{
+   border-bottom: 2px solid #00D494;
+}
+#course:focus{
+     border-bottom: 2px solid #00D494;
+}

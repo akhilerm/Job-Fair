@@ -36,19 +36,26 @@
             </div>
 
             <div class="row">
-               <div class="input-field col s12">
-                <select>
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-                <label>Select Course</label>
-              </div>
+                <div class="input-field col s12">
+            <select style="display: block;border: 1px solid #9e9e9e" id="course">
+            <option value="" disabled selected>Select Course</option>
+            <option value="1">Arsenal</option>
+            <option value="2">Chelsea</option>
+            <option value="3">Manchester United</option>
+            </select>
+        </div>
+        </div>  
               
-              
-              
-            </div>  
+              <div class="row">
+                <div class="input-field col s12">
+            <select style="display: block;border: 1px solid #9e9e9e" id="stream">
+            <option value="" disabled selected>Select Stream</option>
+            <option value="1">Arsenal</option>
+            <option value="2">Chelsea</option>
+            <option value="3">Manchester United</option>
+            </select>
+        </div>
+        </div>  
               
            
             
@@ -67,3 +74,31 @@
     </center>
 
     </main>
+<script type="text/javascript">
+            $(function() {
+
+                $('#teams').change(function() {
+
+                    var 
+                        selectedValue = $('#teams').val(),
+                        dataSource,
+                        i;
+
+                    if (selectedValue === '1') {
+
+                        dataSource = ['Mikel', 'Obi', 'Mikel'];
+                    }
+                    else if (selectedValue === '2') {
+
+                        dataSource = ['Test 1', 'Test 2', 'Test 3'];
+                    }
+
+                    $('#players').html('');
+
+                    for (i in dataSource) {
+
+                        $('#players').append('<option>' + dataSource[i] +'</option>');
+                    }
+                });
+            });
+        </script>
