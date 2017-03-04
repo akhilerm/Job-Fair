@@ -1,0 +1,14 @@
+<?php
+	unset($_SESSION['e_count']);
+	unset($_SESSION['msg_pre_pay']);
+	unset($_SESSION['total_amt']);
+	unset($_SESSION['new_user']);
+	unset($_SESSION['head_id']);
+	unset($_SESSION['email_head']);
+	unset($_SESSION['phone_head']);
+	unset($_SESSION['team_count']);
+	unset($_SESSION['new_user']);
+	unset($_SESSION['head_id']);
+	unset($_SESSION['email_head']);
+	unset($_SESSION['msg_pre_pay']);
+?>
