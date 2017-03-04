@@ -5,8 +5,11 @@
 
 	if($_SESSION['LOGIN']==1  && $_SESSION['PASSWORD']==$verify)	
 	{
+		
+		include("user_account_view.php");
+		unset($_SESSION['LOGIN']);
+		unset($_SESSION['PASSWORD']);
 		//user's page
-
 	}
 
 
