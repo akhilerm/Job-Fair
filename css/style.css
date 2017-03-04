@@ -70,3 +70,15 @@ input:not([type]).validate + label, input[type=text].validate + label, input[typ
     
     font-weight: 600;
 }
+@media only screen and (min-width: 700px) {
+    .formcard
+    {
+        width:55%!important;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .formcard
+    {
+        width:98%!important;
+    }
+}
