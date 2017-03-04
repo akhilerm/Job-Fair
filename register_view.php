@@ -19,7 +19,24 @@
                   <h5 class="colGreen loginHead">Registration</h5>
               </div>
             </div>
+              
+              
+            <div class="row">
+                <div class="input-field col s12">
+                <input  id="full_name" type="text" class="validate">
+                <label for="first_name">Full Name</label>
+                </div>
+            </div>  
+            <div class="row">
+                <div class="input-field col s12">
+                  
+                  <input id="icon_telephone" type="tel" class="validate">
+                  <label for="icon_telephone">Mobile Number</label>
+                </div>
+            </div>
 
+              
+              
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='email' name='email' id='email' />
