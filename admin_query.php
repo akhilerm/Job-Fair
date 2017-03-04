@@ -52,8 +52,11 @@
 
 	function reset_password($user_id,$con){
 		$query = "UPDATE user SET password = sha1('12345678') WHERE id = $user_id";
+		$result = $con->query(query);
+		if($result)
+			return 1;
+		else
+			return 0;
 	}
-
-	
 
 ?>
