@@ -9,8 +9,8 @@
      if($result!=-1)
         echo $result;
      else
-        echo "No Streams 1";
+        echo "-1";
   }
   else
-  	echo "No Streams";
+  	echo "-1";
 ?>

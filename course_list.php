@@ -5,13 +5,13 @@
   {
   	  $result=fetch_courses($con);
   	  if($result!=-1)
-  	  	echo $result;
+  	  	echo '<option value="" disabled selected>Select Stream</option>'.$result;
   	  else
-  	  	echo "No courses";
+  	  	echo "-1";
   }
   else
   {
-  	echo "No courses";
+  	echo "-1";
   	return;
   }
 

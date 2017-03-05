@@ -56,9 +56,9 @@
 			return -1;
 	}
 
-	/*function fetch_course_id($course_name,$con)
+	function get_user_id($email,$con)
 	{
-		$query= "select id from course where course_name='$course_name'";
+		$query= "select id from user where email='$email'";
 		$result=$con->query($query);
 		if($result)
 		{
@@ -72,7 +72,7 @@
 		}
 		else
 			return -1;
-	}*/
+	}
 
 	function fetch_stream($course_id,$con)
 	{
@@ -101,4 +101,19 @@
 
 	}
 
+	function  insert_user($name,$password,$course,$stream,$yop,$current_sem,$email,$college,$phone,$dob,$backlog,$cgpa,$percent,$sslc,$hsc,$resume,$con)
+	{
+		$user_id=get_user_id($email,$con);
+		if($user_id!=-1)
+		{
+			$query="INSERT INTO user (name,password,course,stream,yop,current_sem,email,college,phone,dob,backlog,cgpa,percent,sslc,hsc,resume)";
+			$result=$con->query($query);
+			if($result)
+				return get_user_id($email,$con);
+			else
+				return -1;
+		}
+		else
+			return  -2 ;
+	}
 ?>
