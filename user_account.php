@@ -9,7 +9,7 @@
 		include("dashboard_view.php");
 		unset($_SESSION['LOGIN']);
 		unset($_SESSION['PASSWORD']);
-		unset($_SESSION['USER_ID']);
+		//unset($_SESSION['USER_ID']);                  //to be checked
 	}
 	else
 	{

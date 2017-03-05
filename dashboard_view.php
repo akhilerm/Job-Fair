@@ -4,8 +4,60 @@ require_once("db_connect.php");
 require_once("query.php");
 if($_SESSION['LOGIN']==1 && $_SESSION['PASSWORD']==$verify)
 {
+  $query="select * from user where id=".$_SESSION['USER_ID'];
+  $result=$con->query($query);
+  if($result->num_rows>0)
+  {
+    $row=$result->fetch_assoc();
+    $string='';
+    if($result)
+    {
+      $query="select d.company_id,company_name,backlog_active,cgpa,percent from drives as d, company as c where c.id=d.company_id and d.company_id in (select d.company_id from drives as d, drive_stream as ds where d.company_id=ds.company_id and d.course_id=".$row['course']."  and ds.stream_id=".$row['stream'].")";
+      $result=$con->query($query);
+      if($result->num_rows>0)
+      {
+        $string.='<table class="driveTable striped centered">
+                  <thead>
+                    <tr >
+                        <th data-field="id">Company Name</th>
+                        <th data-field="name">Eligibility</th>
+                        <th data-field="name">Apply</th>       
+                    </tr>
+                  </thead>
+                  <div id="test2" class="col s12">
+                  <tbody class="colGreen">';
+        while($row_comp=$result->fetch_assoc())
+        {
+          $string.='<tr >
+              <td>'.$row_comp['company_name'].'</td>';
+          if($row['backlog']<=$row_comp['backlog_active'] && ($row['cgpa']>=$row_comp['cgpa'] || $row['percent']>=$row_comp['percent'])) 
+            {
+              $_SESSION['APPLY_FLAG']=1;
+              $_SESSION['COMPANY_ID']=$row_comp['company_id'];
+              $string.='<td>Eligible</td>  
+              <td> <button class="btn-flat waves-effect waves-light" href="apply.php" style="border:1px solid #00d494;color:#00d494" type="submit" name="action">Apply
+              <i class="material-icons right">send</i>
+              </button> </td> ';
+            }
+            else 
+            {
+              $string.='<td>Not Eligible</td> ';
+            } 
 
-  $query="select * from drives where course_id in (select course from user where id=$_SESSION['USER_ID'])  and ";
+            $string.='</tr>';
+        }
+        $string.='</tbody> </table>';
+      }
+      else
+        $string.='Currently There are No drives';
+    }
+    else
+      $string.='Currently There are No drives';
+  }
+  
+  else
+    $string.='Currently There are No drives';
+  
 ?>
 
 <main>
@@ -394,40 +446,10 @@ Sales Excutives
     </div>
       
       
-      
-      
-    <div id="test2" class="col s12">
-      
-      
-      
-        <table class="driveTable striped centered">
-        <thead>
-          <tr >
-              <th data-field="id">Company Name</th>
-              <th data-field="name">Eligibility</th>       
-          </tr>
-        </thead>
+         <?php echo $string;  ?> 
+          
 
-        <tbody class="colGreen">
-          
-          <tr >
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td> <button class="btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" type="submit" name="action">Apply
-            <i class="material-icons right">send</i>
-            </button> </td>   
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>  
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-          
-          </tr>
-        </tbody>
-      </table>
+
       
       
       
