@@ -3,6 +3,10 @@ include("header.php");
 ?>
 
 <main>
+    
+ <button class="logout btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" type="submit" name="action">Logout
+                
+</button> 
  <div class="container-fluid">
 
   <div class="row" style="margin-top:5px;">
