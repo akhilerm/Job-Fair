@@ -13,31 +13,31 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input  id="full_name" type="text" class="validate">
+                            <input  id="full_name" type="text" class="validate" required="" aria-required="true">
                             <label for="first_name">Full Name</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="icon_telephone" type="tel" class="validate">
+                            <input id="icon_telephone" type="tel" class="validate" required="" aria-required="true">
                             <label for="icon_telephone">Mobile Number</label>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='input-field col s12'>
-                            <input class='validate' type='email' name='email' id='email' />
+                            <input class='validate' type='email' name='email' id='email' required="" aria-required="true"/>
                             <label for='email'>Enter your email</label>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='input-field col s12'>
-                            <input class='validate' type='password' name='password' id='password' />
+                            <input class='validate' type='password' name='password' id='password' required="" aria-required="true" />
                             <label for='password'>Enter password</label>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='input-field col s12'>
-                            <input class='validate' type='password' name='password' id='password' />
+                            <input class='validate' type='password' name='password' id='password'  required="" aria-required="true"/>
                             <label for='password'>Retype password</label>
                         </div>
                     </div>

@@ -12,12 +12,7 @@
                             <h5 class="colGreen loginHead">Registration</h5>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="icon_telephone" type="tel" class="validate">
-                            <label for="icon_telephone">Mobile Number</label>
-                        </div>
-                    </div>
+                    
                     <div class="row">
                         <div class="input-field col s12">
                             <select style="display: block;border: 1px solid #9e9e9e" id="course">
@@ -54,10 +49,49 @@
                             </select>
                         </div>
                     </div>
-                    <div class="input-field col s12">
-                        <input id="full_name" type="text" class="validate">
-                        <label for="first_name" class="">College</label>
+                    <div class="row">         
+                        <div class="input-field col s12">
+                        <input id="college" type="text" class="validate" required="" aria-required="true">
+                        <label for="college" class="">College</label>
                     </div>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="cgpa" type="number" class="" required="" aria-required="true">
+                            <label for="cgpa">CGPA</label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="cgpa" type="number" class="" required="" aria-required="true">
+                            <label for="cgpa">SSLC(in percentage)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="cgpa" type="number" class="" required="" aria-required="true">
+                            <label for="cgpa">HSC(in percentage)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                    <div class="file-field input-field col s12">
+                      <div class="colGreenbg btn">
+                        <span>Resume</span>
+                        <input type="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                    
+                    </div>
+                    
+                    
                     <br />
                     <center>
                         <div class='row'>
