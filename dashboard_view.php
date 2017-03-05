@@ -1,5 +1,11 @@
 <?php
 include("header.php");
+require_once("db_connect.php");
+require_once("query.php");
+if($_SESSION['LOGIN']==1 && $_SESSION['PASSWORD']==$verify)
+{
+
+  $query="select * from drives where course_id in (select course from user where id=$_SESSION['USER_ID'])  and ";
 ?>
 
 <main>
@@ -15,7 +21,6 @@ include("header.php");
         <li class="tab col s4 l4"><a class="active" href="#test1">Messages</a></li>
         <li class="tab col s4 l4"><a  href="#test2">Drive</a></li>
         <li class="tab col s4 l4"><a  href="#test3">Profile</a></li>
-        
       </ul>
     </div>
     <div id="test1" class="col s12">
@@ -399,24 +404,22 @@ Sales Excutives
         <thead>
           <tr >
               <th data-field="id">Company Name</th>
-              <th data-field="name">Eligibility</th>
-              
+              <th data-field="name">Eligibility</th>       
           </tr>
         </thead>
 
         <tbody class="colGreen">
+          
           <tr >
             <td>Alvin</td>
             <td>Eclair</td>
             <td> <button class="btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" type="submit" name="action">Apply
-    <i class="material-icons right">send</i>
-  </button> </td>
-            
+            <i class="material-icons right">send</i>
+            </button> </td>   
           </tr>
           <tr>
             <td>Alan</td>
-            <td>Jellybean</td>
-          
+            <td>Jellybean</td>  
           </tr>
           <tr>
             <td>Jonathan</td>
@@ -449,5 +452,6 @@ Sales Excutives
 
 </main>
 <?php
+}
 include("footer.php");
 ?>
