@@ -93,4 +93,12 @@
 		else
 			return -1;
 	}
+
+	function fetch_usr_drive()				// fetches drives available for user
+	{
+
+
+
+	}
+
 ?>
