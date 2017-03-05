@@ -94,20 +94,15 @@
 			return -1;
 	}
 
-	function fetch_usr_drive()				// fetches drives available for user
-	{
 
-
-
-	}
-
-	function  insert_user($name,$password,$course,$stream,$yop,$current_sem,$email,$college,$phone,$dob,$backlog,$cgpa,$percent,$sslc,$hsc,$resume,$con)
+	function  insert_user($name,$password,$course,$stream,$yop,$current_sem,$email,$college,$phone,$dob,$backlog,$cgpa,$percent,$sslc,$hsc,$con)
 	{
 		$user_id=get_user_id($email,$con);
-		if($user_id!=-1)
+		if($user_id==-1)
 		{
-			$query="INSERT INTO user (name,password,course,stream,yop,current_sem,email,college,phone,dob,backlog,cgpa,percent,sslc,hsc,resume)";
-			$result=$con->query($query);
+			$query="INSERT INTO user (name,password,course,stream,yop,current_sem,email,college,phone,dob,backlog,cgpa,percent,sslc,hsc) values ('$name','$password',$course,$stream,$yop,$current_sem,'$email','$college','$phone','$dob',$backlog,$cgpa,$percent,$sslc,$hsc)";
+			echo $query;
+			$result=$con->query($query) ;                //delete
 			if($result)
 				return get_user_id($email,$con);
 			else

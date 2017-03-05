@@ -18,29 +18,32 @@
             if(strlen($password)>=8 && strlen($repassword)>=8)
             {
                $_SESSION['NEW_USER']['PASSWORD']=sha1($password);
+               $_SESSION['NEW_USER']['REPASSWORD']=sha1($repassword);
                $_SESSION['NEW_USER']['NAME']=$name;
                $_SESSION['NEW_USER']['EMAIL']=$email;
                $_SESSION['NEW_USER']['DOB']=$dob;
                $_SESSION['NEW_USER']['PHONE']=$phone;
                $_SESSION['NEXT']=1;
+               $_SESSION['FLAG_COURSE']=1;
+               $_SESSION['FLAG_STREAM']=1;
             }
             else
             {
-               $_SESSION['MESSAGE']='PASSWORD SHOULD CONTAIN ATLEAST 8 CHARACTERS';
+               $_SESSION['MESSAGE']='Password Should Contain Atleast 8 Characters';
                header("location:index.php?switch=register");
                return;
             }
          }
          else
          {
-           $_SESSION['MESSAGE']='PASSWORD AND RETYPE NOT MATCHING';
+           $_SESSION['MESSAGE']='Password Not Matching With Retype';
            header("location:index.php?switch=register");
            return;
          }
        } 
        else
        {
-           $_SESSION['MESSAGE']='PHONE NUMBER SHOULD BE OF LENGTH 10';
+           $_SESSION['MESSAGE']='Enter a Valid Phone Number';
            header("location:index.php?switch=register");
            return;
        }
@@ -48,7 +51,7 @@
    }
    else
    {
-     $_SESSION['MESSAGE']='ALL FIELDS ARE MANDATORY';
+     $_SESSION['MESSAGE']='All Fields Are Mandatory ';
      header("location:index.php?switch=register");
      return;
    }
@@ -58,7 +61,26 @@
    {
      unset($_SESSION['NEXT']);
    ?>  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  function validate()
+  {
+   /* var course=document.getElementById('course').value;
+    var stream=document.getElementById('stream').value;
+    var college=document.getElementById('college').value;
+    var c_p=document.getElementById('c_p').value;
+    var sslc=document.getElementById('sslc').value;
+
+    if(course!='' && stream!='' && college!='' && c_p!='' && sslc!='')
+      return true;
+    else 
+    {
+      alert('All fields are mandatory');
+      return false;
+    }*/
+  }
+
+
+</script>
 <main>
    <center>
       <div class="section"></div>
@@ -66,7 +88,7 @@
       <div class="section"></div>
       <div class="container ">
          <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;width:95%;">
-            <form class="col s12" method="post" action="register.php">
+            <form class="col s12" method="post" action="register.php" enctype="multipart/form-data">
                <div class='row'>
                   <div class='col s12'>
                      <h5 class="colGreen loginHead">Registration</h5>
@@ -90,10 +112,10 @@
                      <label>Year of pass</label>
                      <br>
                      <p style="margin-left:-13px;">
-                        <input name="yop" type="radio" id="test1" required>
-                        <label for="test1">2016</label>
-                        <input name="yop" type="radio" id="test2" required>
-                        <label for="test2">2017</label>
+                        <input name="yop" type="radio" id="yop1" value="2016" >
+                        <label for="yop1">2016</label>
+                        <input name="yop" type="radio" id="yop2" value="2017" >
+                        <label for="yop2">2017</label>
                      </p>
                   </div>
                </div>
@@ -129,28 +151,28 @@
                      <label>Mark Scheme</label>
                      <br>
                      <p style="margin-left:-13px;">
-                        <input name="group2" type="radio" id="test3">
-                        <label for="test3">CGPA</label>
-                        <input name="group2" type="radio" id="test4">
-                        <label for="test4">Percentage</label>
+                        <input name="mark" value="c" type="radio" id="mark1" required>
+                        <label for="mark1">CGPA</label>
+                        <input name="mark" value="p" type="radio" id="mark2" required>
+                        <label for="mark2" >Percentage</label>
                      </p>
                   </div>
                </div>
                <div class="row">
                   <div class="input-field col s12">
-                     <input id="cgpa" name="cgpa" type="number" class=""  aria-required="true">
-                     <label for="cgpa">CGPA/Percentage</label>
+                     <input id="c_p" name="c_p" type="number" class="" step="any"  aria-required="true" required>
+                     <label for="c_p">CGPA/Percentage</label>
                   </div>
                </div>
                <div class="row">
                   <div class="input-field col s12">
-                     <input id="sslc" name="sslc" type="number" class="" required="" aria-required="true" required>
+                     <input id="sslc" name="sslc" type="number" class="" required="" aria-required="true" step="any" required>
                      <label for="sslc">SSLC(in percentage)</label>
                   </div>
                </div>
                <div class="row">
                   <div class="input-field col s12">
-                     <input id="hsc" name="hsc" type="number" class=""  aria-required="true">
+                     <input id="hsc" name="hsc" type="number" class=""  aria-required="true" step="any">
                      <label for="hsc">HSC(in percentage)</label>
                   </div>
                </div>
@@ -158,7 +180,7 @@
                   <div class="file-field input-field col s12">
                      <div class="colGreenbg btn">
                         <span>Resume</span>
-                        <input type="file">
+                        <input type="file" name="file_up" required>
                          
                      </div>
                       <div class="file-path-wrapper">
@@ -171,7 +193,7 @@
       <br />
           <center>
               <div class='row'>
-              <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect colGreenbg'>Register</button>
+              <button type='submit' onclick='return validate()' name='btn_login' class='col s12 btn btn-large waves-effect colGreenbg'>Register</button>
               </div>
           </center>
       <br>
@@ -206,6 +228,24 @@
              
              // display list of streams in the specified category
              $('#course').change(function() {
+               if(document.getElementById("course").value=='108')
+               {
+                  document.getElementById("sem").disabled=true;
+                  document.getElementById("backlog").disabled=true;
+                  document.getElementById("mark1").disabled=true;
+                  document.getElementById("mark2").disabled=true;
+                  document.getElementById("c_p").disabled=true;
+                  document.getElementById("hsc").disabled=true;
+               }
+               else
+               {
+                  document.getElementById("sem").disabled=false;
+                  document.getElementById("backlog").disabled=false;
+                  document.getElementById("mark1").disabled=false;
+                  document.getElementById("mark2").disabled=false;
+                  document.getElementById("c_p").disabled=false;
+                  document.getElementById("hsc").disabled=false; 
+               }
                var xmlhttp;           
                if (window.XMLHttpRequest) 
                    xmlhttp = new XMLHttpRequest();
@@ -215,9 +255,9 @@
                 {
                    if (this.readyState == 4 && this.status == 200) 
                    {
-                     if(this.responseText=='-1')
+                     /*if(this.responseText=='-1')
                        document.getElementById("stream_div").innerHTML='';
-                     else
+                     else*/
                        document.getElementById("stream").innerHTML = this.responseText;
                    }
                 };
