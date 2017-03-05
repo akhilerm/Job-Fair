@@ -23,3 +23,7 @@
       width: 0
     });
   });
+
+$(document).ready(function(){
+    $('ul.tabs').tabs();
+  });

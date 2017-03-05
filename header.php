@@ -13,15 +13,9 @@
 <body>
     <header>    
       <nav class="white navBar" role="navigation">
-        <div class="nav-wrapper"><a id="logo-container" href="index.php" class="brandLogo brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#" class="colGreen">Navbar Link</a></li>
-          </ul>
-
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="#" class="colGreen">Navbar Link</a></li>
-          </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse colGreen"><i class="material-icons">menu</i></a>
+        <div class="nav-wrapper"><a id="logo-container" href="index.php" class="brandLogo ">Logo</a>
+          
+        
         </div>
       </nav>
     </header>

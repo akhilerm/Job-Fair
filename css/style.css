@@ -17,6 +17,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    
+    overflow-x:hidden;
          
         
 
@@ -24,10 +26,17 @@ body {
  main {
     flex: 1 0 auto;
   }
-
+.container-fluid{
+    margin: 0 auto;
+    width: 88%;
+}
+hr{
+    border-top: 1px solid #00d494;
+}
 nav .brandLogo{
-        padding: 0 15px;
+     padding: 0 15px;
     color:  #00D494;
+    font-size: 30px;
 }
   .input-field input[type=date]:focus + label,
     .input-field input[type=text]:focus + label,
@@ -75,6 +84,10 @@ input:not([type]).validate + label, input[type=text].validate + label, input[typ
     {
         width:55%!important;
     }
+    .driveTable
+    {
+        width:75%;
+    }
 }
 @media only screen and (max-width: 700px) {
     .formcard
@@ -88,4 +101,15 @@ input:not([type]).validate + label, input[type=text].validate + label, input[typ
 }
 #course:focus{
      border-bottom: 2px solid #00D494;
+}
+
+.tabs .tab a{
+    color: #00d494!important;
+}
+.tabs .indicator{
+    background-color:  #00d494!important;
+}
+.driveTable{
+
+    margin: 0 auto;
 }
