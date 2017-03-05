@@ -19,21 +19,22 @@
 			return 0;
 	}
 
-	function add_company($company_name){
-		$query = "INSERT INTO company (company_name) VALUES ('$company_name')";
-		$result = $con->query($query);
-		if($result)
-			return 1;
-		else
-			return 0;
-	}
-
 	function get_company_name($company_id,$con){
 		$query = "SELECT company_name from company where company_id=$company_id";
 		$result = $con->query($query);
 		if($result){
 			$row = $result->fetch_assoc();
 			return $row['company_name'];
+		}
+		else
+			return 0;
+	}
+
+	function get_all_company($con){
+		$query = "SELECT company_name from company";
+		$result = $con->query($query);
+		if($result){
+			return $result;
 		}
 		else
 			return 0;

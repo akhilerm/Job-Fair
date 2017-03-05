@@ -1,5 +1,7 @@
 <?php
 include("header.php");
+require_once("admin_query.php");
+require_once("db_connect.php");
 ?>
 
 <main>
@@ -30,7 +32,7 @@ include("header.php");
                 </thead>
 
                 <tbody class="colGreen">
-                  <tr >
+                  <!-- <tr >
                     <td>Alvin</td>
                     
 
@@ -45,7 +47,13 @@ include("header.php");
                     <td>Jonathan</td>
                     
                    
-                  </tr>
+                  </tr> -->
+                  <?php
+                    $result=get_all_company($con);
+                    while($row = $result->fetch_assoc()){
+                      echo "<tr><td>".$row['company_name']."</td></tr>";
+                    }
+                  ?>
                     
                    <tr>
                     <td>
@@ -55,7 +63,7 @@ include("header.php");
                                 <label for="first_name">Company Name</label>
                             </div>
                             <div class="col s4">
-                                  <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action">Add
+                                  <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" id="add_c" type="button" onClick="addcomp()">Add
                                     <i class="material-icons right">send</i>
                                   </button> 
                             </div>
@@ -382,3 +390,26 @@ include("header.php");
 <?php
 include("footer.php");
 ?>
+
+<script type="text/javascript">
+  function addcomp(){
+    var xmlhttp;
+    if (window.XMLHttpRequest) 
+       xmlhttp = new XMLHttpRequest();
+    else 
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    var company_name = document.getElementById("full_name").value;
+    var url="add_company.php?name="+company_name;
+    alert(url);
+    //var params = "name="+company_name;
+    xmlhttp.open("GET","add_company.php?name="+company_name, true);
+    xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    alert(this.responseText);
+  }
+};
+    //xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send();
+
+  }
+</script>
