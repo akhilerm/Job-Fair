@@ -57,7 +57,7 @@ else if($mark_radio=='p')
 		           		}
 		           		else
 		           		{
-		           			$uploadfile = $uploaddir . basename($verify.$ext);
+		           			$uploadfile = $uploaddir . basename($verify.".".$ext);
 							if (file_exists($uploadfile)) 
 							{
 								$_SESSION['MESSAGE']="File Already Exists";
