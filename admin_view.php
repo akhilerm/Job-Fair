@@ -40,11 +40,54 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
                       <!-- <tr >
                         <td>Alvin</td>
                         
-
-                      </tr>
-                      <tr>
-                        <td>Alan</td>
-                      
+                  </tr>
+                  <tr>
+                    <td>Jonathan</td>
+                    
+                   
+                  </tr> -->
+                  <?php
+                    $result=get_all_company($con);
+                    while($row = $result->fetch_assoc()){
+                      echo "<tr><td>".$row['company_name']."</td></tr>";
+                    }
+                  ?>
+                    
+                   <tr>
+                    <td>
+                      <form action="" method="POST">
+                        <div class="row">
+                            <div class="input-field col s8">
+                                <input  id="full_name" name="full_name" type="text" class="validate" required="" aria-required="true">
+                                <label for="first_name">Company Name</label>
+                            </div>
+                            <div class="col s4">
+                                  <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" id="add_c" type="button" onClick="">Add
+                                    <i class="material-icons right">send</i>
+                                  </button> 
+                            </div>
+                        </div></form>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+      
+    </div>
+      
+      
+      
+      
+    <div id="test2" class="col s12">
+        <div class="profileCard" style="margin:0 auto;">
+        <div class="card-panel">
+            
+            <form>
+            
+                 <div class="row">
+                  <div class="input-field col s12">
+                     <select style="display: block;border: 1px solid #9e9e9e" name="sem" id="sem">
+                        <option value="" disabled selected>Select Company</option>
+                        <option value="1" >Company</option>
                        
 
                       </tr>
@@ -170,6 +213,7 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
                                     <option value="" disabled selected>Select Cource</option>
                                     <option value="1" >Company</option>
 
+<<<<<<< HEAD
                                  </select>
                               </div>
                             </div>
@@ -178,6 +222,16 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
                                  <select style="display: block;border: 1px solid #9e9e9e" name="str" id="str">
                                     <option value="" disabled selected>Select Stream</option>
                                     <option value="1" >stream</option>
+=======
+                             </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                             <select style="display: block;border: 1px solid #9e9e9e" name="cou" id="cou">
+                                <option value="" disabled selected>Select Course</option>
+                                <option value="1" >Company</option>
+>>>>>>> hakf changes
 
                                  </select>
                               </div>
@@ -390,6 +444,7 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
         </div>
       
 
+<<<<<<< HEAD
     </main>
 
     <?php
@@ -425,4 +480,8 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
 }
 else
   header("location:index.php");
+=======
+<?php
+include("footer.php");
+>>>>>>> hakf changes
 ?>
