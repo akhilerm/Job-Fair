@@ -3,6 +3,9 @@
   $course_id = $_POST['crID'];
   $query = "SELECT * from stream where course_id = $course_id";
   $result = $con->query($query);
+  ?>
+  <option value="0" disabledselected>Select Stream</option>
+  <?php
   if($result){
     while ($row=$result->fetch_assoc()) 
     {

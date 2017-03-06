@@ -3,6 +3,7 @@
 	$companyid = $_POST['cmpid'];
 	$query = "SELECT drives.course_id,course.course_name from drives,course where drives.course_id=course.id and drives.company_id = $companyid";
 	$result = $con->query($query);
+	?><option value="0" disabledselected>Select Course</option><?php
 	if($result){
 		while ($row=$result->fetch_assoc()) 
 		{

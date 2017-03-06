@@ -169,7 +169,6 @@ require_once("db_connect.php");
           });
           $('#course3').on('change',function(){
             var crID = $(this).val();
-            var d1=2;
             if(crID){
               $.ajax({
                 type:'POST',
@@ -180,7 +179,20 @@ require_once("db_connect.php");
                 }
               }); 
             }
-          });        
+          });
+          $('#search_button').on('click'),function(){
+            var cmpid=$('#company4').val();
+            if(cmpid){
+              $.ajax({
+              type:'POST',
+              url:'all_companies.php',
+              data:'cmpID='+cmpID,
+              success:function(html){
+                $('#fill_table').html(html);
+              }
+              }); 
+            }
+          }        
         });
         </script>
         <div id="test3" class="col s12">
@@ -188,18 +200,18 @@ require_once("db_connect.php");
                       <div class="profileCard" style="margin:0 auto;">
                     <div class="card-panel">
 
-                        <form action="" method="POST">
+                        <form action="add_drive_stream.php" method="POST">
 
                              <div class="row">
                               <div class="input-field col s12">
                                  <select style="display: block;border: 1px solid #9e9e9e" name="company3" id="company3">
                                     <?php
                                       $result = get_all_company($con);
-                                      $string="";
                                       while($row=$result->fetch_assoc()){
-                                        $string=$string."<option value='".$row['id']."'>".$row['company_name']."</option>";
+                                        ?>
+                                        <option value='<?php echo $row['id']; ?>'><?php echo $row['company_name']; ?></option>;
+                                        <?php
                                       }
-                                      echo $string;
                                     ?>
                                  </select>
                               </div>
@@ -241,13 +253,19 @@ require_once("db_connect.php");
                   <div class="profileCard" style="margin:0 auto;">
                     <div class="card-panel">
 
-                        <form>
+                        <!-- <form> -->
 
                              <div class="row">
                               <div class="input-field col s12">
-                                 <select style="display: block;border: 1px solid #9e9e9e" name="sem" id="sem">
-                                    <option value="" disabled selected>Select Company</option>
-                                    <option value="1" >Company</option>
+                                 <select style="display: block;border: 1px solid #9e9e9e" name="company4" id="company4">
+                                    <?php
+                                      $result = get_all_company($con);
+                                      while($row=$result->fetch_assoc()){
+                                        ?>
+                                        <option value='<?php echo $row['id']; ?>'><?php echo $row['company_name']; ?></option>;
+                                        <?php
+                                      }
+                                    ?>
 
                                  </select>
                               </div>
@@ -256,7 +274,7 @@ require_once("db_connect.php");
                         
                             <div class="row">
                                  <div class="col s12">
-                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action">Search
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" name="search_button" id="search_button">Search
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>
@@ -264,48 +282,14 @@ require_once("db_connect.php");
                             </div>
 
 
-                        </form>
+                        <!-- </form> -->
                          <table class=" striped centered">
-                    <thead>
-                      <tr >
-                          <h6 class="colGreen" style="text-align:center;font-weight:bold;">Company Name</h6>
-                          
 
-                      </tr>
-                    </thead>
-
-                    <tbody class="colGreen">
-                      <tr >
-                        <td>Course</td>
-                        <td>B-tech</td>
-                          
-                      </tr>
-                      <tr>
-                        <td>Stream</td>
-                        <td>CSE</td>
-                       
-
-                      </tr>
-                      <tr>
-                        <td>Cgpa/percentage</td>
-                        <td>7.99</td>
-                       
-                      </tr>
-                        
-                      <tr>
-                        <td>Email</td>
-                        <td>mhdbazi@gmail.com</td>
-                       
-                      </tr>
-                        
-                      <tr>
-                        <td>Phone</td>
-                        <td>7012044388</td>
-                       
-                      </tr>
-                        
+                        <!-- from here --> 
+                    <div id="fill_table">
                     
-                    </tbody>
+                    </div>
+                    <!-- to here  -->
                   </table>
                         
                         
