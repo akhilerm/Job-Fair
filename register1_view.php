@@ -69,6 +69,8 @@
    var cg = document.getElementById("cg").value;
    var s = document.getElementById("sslc").value;
    var h = document.getElementById("hsc").value;
+   var f = document.getElementById("file_up").value;
+   console.log(f);
   	if(c=="cgpa")
    {   if(cg>10)
       { alert("Please Enter a valid CGPA");
