@@ -52,13 +52,13 @@
                 $string.='</tbody> </table>';
               }
               else
-                $string.='Currently There are No drives';
+                $string.='<div class="card-panel colGreen driveTable"><h6 style="text-align:center">Currently There are No drives</h6></div>';
             }
             else
-              $string.='Currently There are No drives';
+              $string.='<div class="card-panel colGreen driveTable"><h6 style="text-align:center">Currently There are No drives</h6></div>';
           }
           else
-            $string.='Currently There are No drives';
+            $string.='<div class="card-panel colGreen driveTable"><h6 style="text-align:center">Currently There are No drives</h6></div>';
 ?>
       <main>
         <a href="logout.php" class="logout btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" name="action1" >Logout
@@ -106,7 +106,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/atm.png" style="border-bottom:1px solid #00d494">
+                      <img src="images/ali.jpg" style="border-bottom:1px solid #00d494">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -141,7 +141,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/atm.png" style="border-bottom:1px solid #00d494">
+                      <img src="images/sri.jpg" style="border-bottom:1px solid #00d494">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -176,7 +176,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/atm.png" style="border-bottom:1px solid #00d494">
+                      <img src="images/piv.jpg" style="border-bottom:1px solid #00d494">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -212,7 +212,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/atm.png" style="border-bottom:1px solid #00d494">
+                      <img src="images/too.jpg" style="border-bottom:1px solid #00d494">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -250,7 +250,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/atm.png" style="border-bottom:1px solid #00d494">
+                      <img src="images/faz.jpg" style="border-bottom:1px solid #00d494">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -288,7 +288,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/atm.png" style="border-bottom:1px solid #00d494">
+                      <img src="images/per.jpg" style="border-bottom:1px solid #00d494">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -323,7 +323,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/atm.png" style="border-bottom:1px solid #00d494">
+                      <img src="images/cog.jpg" style="border-bottom:1px solid #00d494">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -355,8 +355,94 @@
                     </div>
                   </div>
                 </div>
-                <!-- Ends here -->
+                  
+                  
+                  
+                <div class="col s12 l3">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/cor.jpg" style="border-bottom:1px solid #00d494">
+                    </div>
+                    <div class="card-content">
+                      <div class="row">
+                        <h5 class="center-align colGreen">Corporate360 </h5>
+                        <hr class="style1">
+                        <div class="col s12 l12">
+                          <h6 class="colGreen">CTC</h6>
+                        </div>
+                        <div class="col s12 l12">
+                          <h6>To be decided </h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12 l12">
+                          <h6 class="colGreen">Who can apply</h6>
+                        </div>
+                        <div class="col s12 l12">
+                          <h6>B.tech:Computer scince <br>MCA/BCA</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12 l12">
+                          <h6 class="colGreen">Eligibility</h6>
+                        </div>
+                        <div class="col s12 l12">
+                          <h6>Above 70 or 7.0 cgpa</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  
+                
               </div>
+                
+            <!-- Ends here -->
+              <div class="row">
+                
+                  <div class="col s12 l3">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/mut.jpg" style="border-bottom:1px solid #00d494">
+                    </div>
+                    <div class="card-content">
+                      <div class="row">
+                        <h5 class="center-align colGreen">Muthoot Pappachan Technologies LTD. </h5>
+                        <hr class="style1">
+                        <div class="col s12 l12">
+                          <h6 class="colGreen">CTC</h6>
+                        </div>
+                        <div class="col s12 l12">
+                          <h6>To be decided </h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12 l12">
+                          <h6 class="colGreen">Who can apply</h6>
+                        </div>
+                        <div class="col s12 l12">
+                          <h6>B.tech:Computer scince <br>MCA/BCA</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12 l12">
+                          <h6 class="colGreen">Eligibility</h6>
+                        </div>
+                        <div class="col s12 l12">
+                          <h6>Above 70 or 7.0 cgpa</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                    
+                
+                
+              </div>
+                
+                
+                  
+            <!-- Ends here -->  
             </div>
 
             <div id="test2" class="col s12">
@@ -366,12 +452,34 @@
          
           <div id="test3" class="col s12">
             <div class="row">
-              <div class="" style="margin:0 auto; width:80%;">
-                <div class="card-panel">
-                  <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-                  </span>
-                </div>
+              <div class="driveTable" style="margin:15px auto; ">
+                  <table class="striped centered">
+                    <thead>
+                      
+                          
+                          <h5 class="center-align colGreen" > Personal Profile</h5>
+                        <hr class="style1">
+                      
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                     
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                   
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                      
+                      </tr>
+                    </tbody>
+                  </table>
               </div>
             </div>
           </div>

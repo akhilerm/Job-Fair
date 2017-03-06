@@ -15,7 +15,8 @@
 <body>
     <header>    
       <nav class="white navBar" role="navigation">
-        <div class="nav-wrapper"><a id="logo-container" href="logout.php" class="brandLogo ">Logo</a>
+
+        <div class="nav-wrapper"><a  href="logout.php"><img src="images/title.png" id="logo-container" class="brandLogo ">Logo</img></a>
           
         
         </div>

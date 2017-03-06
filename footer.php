@@ -3,7 +3,7 @@
           <div class=" colGreenbg footer-copyright">
             <div class="container">
             <br>
-                <a class="grey-text text-lighten-4 center-align" href="#!"><p>© 2014 Copyright Text</p></a>
+                <a class="grey-text text-lighten-4 center-align" href="#!"><p>© Conjura'17</p></a>
             <br>
             </div>
           </div>
