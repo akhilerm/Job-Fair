@@ -200,8 +200,16 @@ require_once("db_connect.php");
             var s_email = document.getElementById("s_email").value;
             if(s_id==NULL && s_email==NULL)
               alert("Enter a field to search");
-            if(s_id==NULL)
-              
+            if(s_id==NULL){
+              $.ajax({
+              type:'POST',
+              url:'searchEmail.php',
+              data:'email='+s_email,
+              success:function(html){
+                $('#').html(html);
+              }
+              });
+            }
         }
         </script>
         <div id="test3" class="col s12">
@@ -314,8 +322,8 @@ require_once("db_connect.php");
                       <div class="profileCard" style="margin:0 auto;">
                     <div class="card-panel">
 
-                        <form>
-
+                        <form >
+                            <?php ?>
                              <div class="row">
                                   <div class="input-field col s12">
                                      <input id="s_id" name="s_id" type="number" class=""  aria-required="true">
@@ -325,7 +333,7 @@ require_once("db_connect.php");
                             
                               <div class='row'>
                             <div class='input-field col s12'>
-                                <input class='validate' type='s_email' name='s_email' id='s_email' required="" aria-required="true"/>
+                                <input class='validate' type='email' name='s_email' id='s_email' required="" aria-required="true"/>
                                 <label for='s_email'>Enter your email</label>
                             </div>
                         </div>
@@ -340,7 +348,7 @@ require_once("db_connect.php");
 
 
                         </form>
-                        <form>
+                        <form >
                         
                             <div class="row">
                             <div class="input-field col s12">
@@ -384,14 +392,14 @@ require_once("db_connect.php");
 
                         </form>
 
-                          <div class="row">
+                          <!-- <div class="row">
                                  <div class="col s12">
                                               <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action">Apply Changes
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>
 
-                            </div>
+                            </div> -->
 
                     </div>
                   </div> 
@@ -401,7 +409,10 @@ require_once("db_connect.php");
           <div id="test6" class="col s12">
           
                 <div class="row">
-                  <div class="col s12 l3">
+                <?php
+                $query = "SELECT drives.company_id,company.company_name,drives.cgpa,drives.backlog from company,drives where drives.company_id=company.id";
+                ?>
+                  <!-- <div class="col s12 l3">
                     <div class="card-panel">
                        <h5 style="text-align:center">Company Name</h5>
                         <hr>
@@ -421,7 +432,7 @@ require_once("db_connect.php");
                             
                         </table>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
         
          </div> 
