@@ -36,26 +36,6 @@
 			return -1;
 	}
 
-	function fetch_courses($con)
-	{
-		$query="select * from course";
-		$result=$con->query($query);
-		if($result)
-		{
-			if($result->num_rows>0)
-			{
-				$string='';
-				while($row= $result->fetch_assoc())
-					$string.='<option value='.$row['id'].'>'.$row['course_name'].'</option>';
-				return $string;
-			}
-			else
-				return -1;
-		}
-		else
-			return -1;
-	}
-
 	function get_user_id($email,$con)
 	{
 		$query= "select id from user where email='$email'";
@@ -69,18 +49,6 @@
 			}
 			else
 				return -1;
-		}
-		else
-			return -1;
-	}
-
-	function fetch_stream($course_id,$con)
-	{
-		$query= 'select * from stream where course_id='.$course_id;
-		$result=$con->query($query);
-		if($result)
-		{
-			return $result;
 		}
 		else
 			return -1;

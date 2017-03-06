@@ -1,6 +1,6 @@
 <?php
-   session_start();
    require_once('db_connect.php');
+   session_create();
    
    $name=cleanup($_POST['full_name'],$con);
    $phone=cleanup($_POST['phone'],$con);
@@ -193,68 +193,46 @@
    ?>
 <script type="text/javascript">
    $(document).ready(function() {
-             //for loading list of courses
-                  $.ajax({
-                    type:'POST',
-                    url:'course_list.php',
-                    success:function(html){
-                      $('#course').html(html);
-                    }
-                  }); 
+       //for loading list of courses
+        $.ajax({
+          type:'POST',
+          url:'course_list.php',
+          success:function(html){
+            $('#course').html(html);
+          }
+        }); 
 
-
-             var xmlhttp;
-             if (window.XMLHttpRequest) 
-                 xmlhttp = new XMLHttpRequest();
-             else 
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-             xmlhttp.onreadystatechange = function()
-             {
-                 if (this.readyState == 4 && this.status == 200) 
-                     document.getElementById("course").innerHTML = this.responseText;
-             };
-             xmlhttp.open("GET", "course_list.php?temp=1", true);
-             xmlhttp.send();
-             
-             // display list of streams in the specified category
-             $('#course').change(function() {
-               if(document.getElementById("course").value=='108')
-               {
-                  document.getElementById("sem").disabled=true;
-                  document.getElementById("backlog").disabled=true;
-                  document.getElementById("mark1").disabled=true;
-                  document.getElementById("mark2").disabled=true;
-                  document.getElementById("c_p").disabled=true;
-                  document.getElementById("hsc").disabled=true;
-               }
-               else
-               {
-                  document.getElementById("sem").disabled=false;
-                  document.getElementById("backlog").disabled=false;
-                  document.getElementById("mark1").disabled=false;
-                  document.getElementById("mark2").disabled=false;
-                  document.getElementById("c_p").disabled=false;
-                  document.getElementById("hsc").disabled=false; 
-               }
-               var xmlhttp;           
-               if (window.XMLHttpRequest) 
-                   xmlhttp = new XMLHttpRequest();
-               else 
-                  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-               xmlhttp.onreadystatechange = function()
-                {
-                   if (this.readyState == 4 && this.status == 200) 
-                   {
-                     /*if(this.responseText=='-1')
-                       document.getElementById("stream_div").innerHTML='';
-                     else*/
-                       document.getElementById("stream").innerHTML = this.responseText;
-                   }
-                };
-               var course1= document.getElementById("course");
-               var course= course1[course1.selectedIndex].value;
-               xmlhttp.open("GET", "stream_list.php?temp=2&course_id="+course, true);
-               xmlhttp.send();
-           });
+       // display list of streams in the specified category
+       $('#course').on('change',function(){
+          var crID = $(this).val();
+          if(crID==108)
+          {
+            document.getElementById("sem").disabled=true;
+            document.getElementById("backlog").disabled=true;
+            document.getElementById("mark1").disabled=true;
+            document.getElementById("mark2").disabled=true;
+            document.getElementById("c_p").disabled=true;
+            document.getElementById("hsc").disabled=true;
+          }
+          else
+          {
+            document.getElementById("sem").disabled=false;
+            document.getElementById("backlog").disabled=false;
+            document.getElementById("mark1").disabled=false;
+            document.getElementById("mark2").disabled=false;
+            document.getElementById("c_p").disabled=false;
+            document.getElementById("hsc").disabled=false;
+          }
+          if(crID){
+            $.ajax({
+              type:'POST',
+              url:'stream_list.php',
+              data:'crID='+crID,
+              success:function(html){
+                $('#stream').html(html);
+              }
+            }); 
+          }
+       }); 
    });
 </script>

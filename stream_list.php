@@ -9,14 +9,14 @@
       $temp1=$row['id'];
       $temp2=$row['stream_name'];
       ?>
-      <option value ="<?php echo $temp1; ?>"><?php echo $temp2; ?></option>"
+      <option value ="<?php echo $temp1; ?>"><?php echo $temp2; ?></option>
       <?php
     }
   }
   else
   {
     ?>
-    <option value = '0'>Not Available</option>
+    <option value = '0'>Not Available <?php echo $_POST['crID'] ?></option>
     <?php
   }
 ?>

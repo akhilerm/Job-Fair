@@ -34,7 +34,7 @@
                 $_SESSION['APPLY_FLAG']=1;
                 $_SESSION['COMPANY_ID']=$row_comp['company_id'];
                 $string.='<td>Eligible</td>  
-                <td> <button class="btn-flat waves-effect waves-light" href="apply.php" style="border:1px solid #00d494;color:#00d494" type="submit" name="action">Apply
+                <td> <button class="btn-flat waves-effect waves-light"  style="border:1px solid #00d494;color:#00d494" type="submit" name="action" id="action">Apply
                 <i class="material-icons right">send</i>
                 </button> </td> ';
               }
@@ -381,3 +381,7 @@
   }
   include("footer.php");
   ?>
+
+<script>
+  $('#action').on('click',function(){});
+</script>
