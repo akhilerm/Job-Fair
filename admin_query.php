@@ -19,6 +19,10 @@
 			return 0;
 	}
 
+	function add_company($con){
+		$company_name = $_POST['full_name'];
+	}
+
 	function get_company_name($company_id,$con){
 		$query = "SELECT company_name from company where company_id=$company_id";
 		$result = $con->query($query);
