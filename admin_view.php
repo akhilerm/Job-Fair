@@ -194,6 +194,14 @@ require_once("db_connect.php");
               }
               }); 
           } 
+
+        function search_edit(){
+            var s_id = document.getElementById("s_id").value;
+            var s_email = document.getElementById("s_email").value;
+            if(s_id==NULL && s_email==NULL)
+              alert("Enter a field to search");
+             
+        }
         </script>
         <div id="test3" class="col s12">
           
@@ -309,20 +317,20 @@ require_once("db_connect.php");
 
                              <div class="row">
                                   <div class="input-field col s12">
-                                     <input id="id" name="id" type="number" class=""  aria-required="true">
-                                     <label for="id">ID</label>
+                                     <input id="s_id" name="s_id" type="number" class=""  aria-required="true">
+                                     <label for="s_id">ID</label>
                                   </div>
                                </div>
                             
                               <div class='row'>
                             <div class='input-field col s12'>
-                                <input class='validate' type='email' name='email' id='email' required="" aria-required="true"/>
-                                <label for='email'>Enter your email</label>
+                                <input class='validate' type='s_email' name='s_email' id='s_email' required="" aria-required="true"/>
+                                <label for='s_email'>Enter your email</label>
                             </div>
                         </div>
                             <div class="row">
                                  <div class="col s12">
-                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action">Search
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action" onclick="search_edit()">Search
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>
@@ -374,6 +382,15 @@ require_once("db_connect.php");
                            </div>    
 
                         </form>
+
+                          <div class="row">
+                                 <div class="col s12">
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action">Apply Changes
+                                                <i class="material-icons right">send</i>
+                                              </button> 
+                                </div>
+
+                            </div>
 
                     </div>
                   </div> 
