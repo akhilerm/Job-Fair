@@ -200,7 +200,8 @@ require_once("db_connect.php");
             var s_email = document.getElementById("s_email").value;
             if(s_id==NULL && s_email==NULL)
               alert("Enter a field to search");
-             
+            if(s_id==NULL)
+              
         }
         </script>
         <div id="test3" class="col s12">
