@@ -188,7 +188,7 @@ require_once("db_connect.php");
                       <div class="profileCard" style="margin:0 auto;">
                     <div class="card-panel">
 
-                        <form>
+                        <form action="" method="POST">
 
                              <div class="row">
                               <div class="input-field col s12">
@@ -207,14 +207,14 @@ require_once("db_connect.php");
                             <div class="row">
                               <div class="input-field col s12">
                                  <select style="display: block;border: 1px solid #9e9e9e" name="course3" id="course3">
-                                    <option value="0">Select Course</option>
+                                    <option value="0" disableselected>Select Course</option>
                                  </select>
                               </div>
                             </div>
                             <div class="row">
                               <div class="input-field col s12">
                                  <select style="display: block;border: 1px solid #9e9e9e" name="stream3" id="stream3">
-                                    <option value="0">Select Stream</option>
+                                    <option value="0" disabledselected>Select Stream</option>
 
                                  </select>
                               </div>

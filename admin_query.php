@@ -2,7 +2,7 @@
 	require_once("db_connect.php");
 	
 	function add_drive($course_id,$company_id,$backlog_active,$cgpa,$percent,$con){
-		$query = "INSERT INTO drives (company_id,course_id,backlog_active,cgpa,percent) VALUES ($company_id,$course_id,$backlog_active,$cgpa,$percent)";
+		$query = "INSERT INTO drives (company_id,course_id,backlog_active,cgpa,percent) VALUES ($company_id,$co_id,$backlog_active,$cgpa,$percent)";
 		$result = $con->query($query);
 		if($result)
 			return 1;
@@ -10,8 +10,8 @@
 			return 0;
 	}
 
-	function add_drive_stream($company_id,$course_id,$stream_id,$con){
-		$query = "INSERT INTO drive_stream (company_id,course_id,stream_id) VALUES ($company_id,$course_id,$stream_id)";
+	function add_drive_stream($company_id,$stream_id,$con){
+		$query = "INSERT INTO drive_stream (company_id,stream_id) VALUES ($company_id,$stream_id)";
 		$result = $con->query($query);
 		if($result)
 			return 1;
