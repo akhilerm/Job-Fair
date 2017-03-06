@@ -470,6 +470,10 @@
                             $row1=$result_user->fetch_assoc();
                             echo 
                              "<tr>
+                                <td class='colGreen'>Conjura ID:</td>
+                                <td>".$_SESSION['USER_ID']."</td>
+                              </tr>
+                              <tr>
                                 <td class='colGreen'>Name:</td>
                                 <td>".$row1['name']."</td></tr>
                               <tr>

@@ -1,7 +1,15 @@
 <?php
     include("header.php");
-    if(session_status() == PHP_SESSION_ACTIVE)
-        sess_destroy();
+    require_once("db_connect.php");
+    session_create();
+    if(isset($_SESSION['LoggedINAdmin']))
+    {
+        header("location:admin_panel.php");
+    }
+    else if (isset($_SESSION['LoggedINUser']))
+    {   
+        header("location:user_account.php"); 
+    }   
     if(!empty($_GET['switch']))
     {
     	if($_GET['switch']=='register')

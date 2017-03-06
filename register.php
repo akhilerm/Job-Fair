@@ -78,7 +78,7 @@ else
 							}
 							if (move_uploaded_file($_FILES['file_up']['tmp_name'], $uploadfile))
 							{
-								$_SESSION['MESSAGE']="Successful Registration. Your ID is :".$verify;
+								$_SESSION['MESSAGE']="Successful Registration. Your Conjura ID is : CT".$verify;
 		           				header("location:index.php");
 		           				return ;
 							}

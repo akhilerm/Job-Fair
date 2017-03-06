@@ -1,6 +1,5 @@
 <?php
    require_once('db_connect.php');
-   session_create();
    
    $name=cleanup($_POST['full_name'],$con);
    $phone=cleanup($_POST['phone'],$con);

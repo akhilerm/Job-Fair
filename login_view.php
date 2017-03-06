@@ -1,6 +1,5 @@
 <?php
     require_once("db_connect.php");
-    session_create();
     if (session_check()==false)
     {   
         if (!isset($_SESSION['LoggedINAdmin']) && !isset($_SESSION['LoggedINAdmin']))

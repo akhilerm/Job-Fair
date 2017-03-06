@@ -35,8 +35,7 @@
         <div class="section"></div>
         <h5 class="colGreen jobportalHeading">REGISTRATION</h5>
 		<div class="section">
-            <?php 
-                session_start();  
+            <?php  
                 if(isset($_SESSION['MESSAGE']))
                 {
                   echo  $_SESSION['MESSAGE'];
