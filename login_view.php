@@ -1,9 +1,16 @@
+<?php
+    require_once("db_connect.php");
+    session_create();
+    if (session_check()==false)
+    {   
+        if (!isset($_SESSION['LoggedINAdmin']) && !isset($_SESSION['LoggedINAdmin']))
+        {
+?>            
 <main>
     <center>
         <div class="section"></div>
         <div class="section">
-            <?php 
-                session_start();  
+            <?php  
                 if(isset($_SESSION['MESSAGE']))
                 {
                   echo  $_SESSION['MESSAGE'];
@@ -44,3 +51,7 @@
         </div>
     </center>
 </main>
+<?php
+}
+}
+?>
