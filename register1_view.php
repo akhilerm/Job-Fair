@@ -62,6 +62,33 @@
      unset($_SESSION['NEXT']);
    ?>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       <script>
+         function validate()
+  {	console.log("in validate");
+  var c = document.forms["regform"]["cgpa"].value;
+   var cg = document.getElementById("cg").value;
+   var s = document.getElementById("sslc").value;
+   var h = document.getElementById("hsc").value;
+  	if(c=="cgpa")
+   {   if(cg>10)
+      { alert("Please Enter a valid CGPA");
+       return false;}
+   }
+   if(cg>100)
+   {    alert("Please Enter a valid Percentage");
+       return false;
+   }
+   if(c=="cgpa")
+   {   if(cg>10)
+      { alert("Please Enter a valid Percentage");
+       return false;}
+   }
+   
+  }
+        </script>
+        </script>
+        </script>
+        </script>
 <main>
    <center>
       <div class="section"></div>
