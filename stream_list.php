@@ -1,6 +1,6 @@
 <?php
   require("db_connect.php");
-  $course_id = $_POST['crID'];
+  $course_id =$_POST['crID'];
   $query = "SELECT * from stream where course_id = $course_id";
   $result = $con->query($query);
   ?>
@@ -19,7 +19,7 @@
   else
   {
     ?>
-    <option value = '0'>Not Available <?php echo $_POST['crID'] ?></option>
+    <option value = '0'>Not Available</option>
     <?php
   }
 ?>

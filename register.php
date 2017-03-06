@@ -7,23 +7,35 @@ session_create();
 $course=cleanup($_POST['course'],$con);
 $stream=cleanup($_POST['stream'],$con);
 $yop=cleanup($_POST['yop'],$con);
-$current_sem=cleanup($_POST['sem'],$con);
 $college=cleanup($_POST['college'],$con);
-$mark=cleanup($_POST['c_p'],$con);
 $sslc=cleanup($_POST['sslc'],$con);
-$backlog=cleanup($_POST['backlog'],$con);
-$hsc=cleanup($_POST['hsc'],$con);
 
-$mark_radio=cleanup($_POST['mark'],$con);
-if($mark_radio=='c')
+if($course!=108)
 {
-	$cgpa=$mark;
-	$percent=0;
+	$current_sem=cleanup($_POST['sem'],$con);
+	$mark=cleanup($_POST['c_p'],$con);
+	$backlog=cleanup($_POST['backlog'],$con);
+	$hsc=cleanup($_POST['hsc'],$con);
+	$mark_radio=cleanup($_POST['mark'],$con);
+	if($mark_radio=='c')
+	{
+		$cgpa=$mark;
+		$percent=0;
+	}
+	else if($mark_radio=='p')
+	{
+		$percent=$mark;
+		$cgpa=0;
+	}
 }
-else if($mark_radio=='p')
+else
 {
-	$percent=$mark;
-	$cgpa=0;
+	$current_sem=0;
+	$mark=0;
+	$backlog=0;
+	$hsc=0;
+	$cgpa=10;
+	$percent=100;
 }
 
  if((!empty($_SESSION['NEW_USER']['PASSWORD'])) && (!empty($_SESSION['NEW_USER']['NAME'])) && (!empty($_SESSION['NEW_USER']['EMAIL'])) && (!empty($_SESSION['NEW_USER']['DOB'])) && (!empty($_SESSION['NEW_USER']['PHONE']))  )
@@ -109,15 +121,15 @@ else if($mark_radio=='p')
     }
     else
     {
-    	$_SESSION['MESSAGE']='All Fields Are Mandatory ';                      //should be checked
-    	$_SESSION['NEXT']=1;
+    	$_SESSION['MESSAGE']='All Fields Are Mandatory inner';                      //should be checked
+    	//$_SESSION['NEXT']=1;
     	header("location:index.php?switch=register");
     	return;
     }
   }
   else
   {
-    $_SESSION['MESSAGE']='All Fields Are Mandatory ';
+    $_SESSION['MESSAGE']='All Fields Are Mandatory outer';                //delete
     header("location:index.php?switch=register");
     return;
   }

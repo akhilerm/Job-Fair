@@ -62,30 +62,46 @@
      unset($_SESSION['NEXT']);
    ?>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-       <script>
+        <script>
          function validate()
-  {	console.log("in validate");
-  var c = document.forms["regform"]["cgpa"].value;
-   var cg = document.getElementById("cg").value;
-   var s = document.getElementById("sslc").value;
-   var h = document.getElementById("hsc").value;
-   var f = document.getElementById("file_up").value;
-   console.log(f);
-  	if(c=="cgpa")
+  { 
+   var c = document.forms["regform"]["mark"].value;
+   var cg = document.forms["regform"]["c_p"].value;
+   var s = document.forms["regform"]["sslc"].value;
+   var h = document.forms["regform"]["hsc"].value;
+   var f = document.forms["regform"]["file_up"].value;   
+   if(c=="c")
    {   if(cg>10)
-      { alert("Please Enter a valid CGPA");
-       return false;}
+       {
+         alert("Please Enter a valid CGPA");
+         return false;
+       }
+   }
+   if(c=="p")
+   {   if(cg>100)
+       {
+         alert("Please Enter a valid Percentage");
+         return false;
+       }
    }
    if(cg>100)
-   {    alert("Please Enter a valid Percentage");
+   {   
+       alert("Please Enter a valid Percentage");
        return false;
    }
-   if(c=="cgpa")
-   {   if(cg>10)
-      { alert("Please Enter a valid Percentage");
-       return false;}
+   if((s>100)||(h>100))
+   {  
+       alert("Please Enter a valid Percentage");
+       return false;
    }
    
+   if( f.indexOf('.pdf') < 0)
+   { 
+      alert("Please Enter a valid pdf file");
+      return false;
+   }
+   return true;
+      
   }
         </script>
         </script>
@@ -98,7 +114,7 @@
       <div class="section"></div>
       <div class="container ">
          <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;width:95%;">
-            <form class="col s12" method="post" action="register.php" enctype="multipart/form-data">
+            <form name="regform" onsubmit="return validate()" class="col s12" method="post" action="register.php" enctype="multipart/form-data">
                <div class='row'>
                   <div class='col s12'>
                      <h5 class="colGreen loginHead">Registration</h5>
@@ -122,10 +138,17 @@
                      <label>Year of pass</label>
                      <br>
                      <p style="margin-left:-13px;">
-                        <input name="yop" type="radio" id="yop1" value="2016" >
+                        <input name="yop" type="radio" id="yop1" value="2016" required>
                         <label for="yop1">2016</label>
-                        <input name="yop" type="radio" id="yop2" value="2017" >
+                        <input name="yop" type="radio" id="yop2" value="2017" required>
                         <label for="yop2">2017</label>
+                        <input name="yop" type="radio" id="yop3" value="2018" required>
+                        <label for="yop3">2018</label>
+                        <input name="yop" type="radio" id="yop4" value="2019" required>
+                        <label for="yop4">2019</label>
+                        <input name="yop" type="radio" id="yop5" value="2020" required>
+                        <label for="yop5">2020</label>
+                        
                      </p>
                   </div>
                </div>

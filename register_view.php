@@ -5,29 +5,28 @@
   
   
  function validate()
-  {	console.log("in validate");
-
-   var x = document.forms["regfrom"]["phone"].value;
-   var p = document.forms["regfrom"]["password"].value;
-   var rp = document.forms["regfrom"]["repassword"].value;
-  	if(x.length!=10)
-    {   
-       alert("Please Enter a 10 digit Phone number");
-       return false;
-    }
-   if(p.length<8)
-   {
-           alert("Password Must Contain Atleast 8 Characters");
+  {	
+       var x = document.forms["regfrom"]["phone"].value;
+       var p = document.forms["regfrom"]["password"].value;
+       var rp = document.forms["regfrom"]["repassword"].value;
+      	if(x.length!=10)
+        {   
+           alert("Please Enter a 10 digit Phone number");
            return false;
-   }
-   if(p!==rp)
-   {    
-       alert("Passwords Do Not Match");
-       document.forms["regfrom"]["password"].value='';
-       document.forms["regfrom"]["repassword"].value='';
-       return false;
-   }
-   return true;
+        }
+       if(p.length<8)
+       {
+               alert("Password Must Contain Atleast 8 Characters");
+               return false;
+       }
+       if(p!==rp)
+       {    
+           alert("Passwords Do Not Match");
+           document.forms["regfrom"]["password"].value='';
+           document.forms["regfrom"]["repassword"].value='';
+           return false;
+       }
+       return true;
 }
 
 </script>
