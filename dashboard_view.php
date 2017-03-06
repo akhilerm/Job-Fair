@@ -394,16 +394,14 @@
 <script>
 function apply(company_id,count)
 {
-  $(document).ready(function() {
       $.ajax({
         type:'POST',
         url:'apply.php',
-        data:'C_ID='+comp_id,
+        data:'C_ID='+company_id,
         success:function(html){
           $(this).attr('disabled', 'disabled');                           //check
           alert(html);
         }
       });
-  });
 }
 </script>
