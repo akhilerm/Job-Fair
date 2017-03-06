@@ -61,26 +61,7 @@
    {
      unset($_SESSION['NEXT']);
    ?>  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-  function validate()
-  {
-   /* var course=document.getElementById('course').value;
-    var stream=document.getElementById('stream').value;
-    var college=document.getElementById('college').value;
-    var c_p=document.getElementById('c_p').value;
-    var sslc=document.getElementById('sslc').value;
-
-    if(course!='' && stream!='' && college!='' && c_p!='' && sslc!='')
-      return true;
-    else 
-    {
-      alert('All fields are mandatory');
-      return false;
-    }*/
-  }
-
-
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <main>
    <center>
       <div class="section"></div>

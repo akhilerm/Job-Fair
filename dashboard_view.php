@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 <?php
 include("header.php");
 require_once("db_connect.php");
@@ -16,6 +18,7 @@ if($_SESSION['LOGIN']==1 && $_SESSION['PASSWORD']==$verify)
       $result=$con->query($query);
       if($result->num_rows>0)
       {
+        $count=0;
         $string.='<table class="driveTable striped centered">
                   <thead>
                     <tr >
@@ -28,6 +31,7 @@ if($_SESSION['LOGIN']==1 && $_SESSION['PASSWORD']==$verify)
                   <tbody class="colGreen">';
         while($row_comp=$result->fetch_assoc())
         {
+          $count++;
           $string.='<tr >
               <td>'.$row_comp['company_name'].'</td>';
           if($row['backlog']<=$row_comp['backlog_active'] && ($row['cgpa']>=$row_comp['cgpa'] || $row['percent']>=$row_comp['percent'])) 
@@ -35,13 +39,13 @@ if($_SESSION['LOGIN']==1 && $_SESSION['PASSWORD']==$verify)
               $_SESSION['APPLY_FLAG']=1;
               $_SESSION['COMPANY_ID']=$row_comp['company_id'];
               $string.='<td>Eligible</td>  
-              <td> <button class="btn-flat waves-effect waves-light" href="apply.php" style="border:1px solid #00d494;color:#00d494" type="submit" name="action">Apply
+              <td> <button id="btn'.$count.'" class="btn-flat waves-effect waves-light" onclick="apply('.$_SESSION['COMPANY_ID'].','.$count.')" style="border:1px solid #00d494;color:#00d494" type="submit" name="action">Apply
               <i class="material-icons right">send</i>
               </button> </td> ';
             }
             else 
             {
-              $string.='<td>Not Eligible</td> ';
+              $string.='<td>Not Eligible</td> <td></td>';
             } 
 
             $string.='</tr>';
@@ -462,8 +466,7 @@ Sales Excutives
       <div class="row">
       <div class="" style="margin:0 auto; width:80%;">
         <div class="card-panel">
-          <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          <span class="white-text">
           </span>
         </div>
       </div>
@@ -477,3 +480,75 @@ Sales Excutives
 }
 include("footer.php");
 ?>
+
+<script type="text/javascript">
+  function apply(company, count)
+  {
+     var xmlhttp;
+     if (window.XMLHttpRequest) 
+         xmlhttp = new XMLHttpRequest();
+     else 
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+     xmlhttp.onreadystatechange = function()
+     {
+         if (this.readyState == 4 && this.status == 200) 
+         {
+            if(this.responseText ==-2)
+            {
+              alert("Already Applied");
+              document.getElementById('btn'+count).disabled=true;
+            }
+            else  if(this.responseText ==-1 || this.responseText ==-3)
+                alert("Something Went Wrong..Try Again");
+            else  if(this.responseText ==0 )
+            {
+              alert("Applied Successfully");
+              document.getElementById('btn'+count).disabled=true;
+            }
+
+
+         }
+     };
+     xmlhttp.open("GET", "apply.php?company="+company, true);
+     xmlhttp.send();
+     
+
+
+  }
+
+
+   /*$(document).ready(function() {
+             //for loading list of courses
+             var xmlhttp;
+             if (window.XMLHttpRequest) 
+                 xmlhttp = new XMLHttpRequest();
+             else 
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+             xmlhttp.onreadystatechange = function()
+             {
+                 if (this.readyState == 4 && this.status == 200) 
+                     document.getElementById("course").innerHTML = this.responseText;
+             };
+             xmlhttp.open("GET", "course_list.php?temp=1", true);
+             xmlhttp.send();
+             
+             // display list of streams in the specified category
+             $('#course').click(function() {
+               var xmlhttp;           
+               if (window.XMLHttpRequest) 
+                   xmlhttp = new XMLHttpRequest();
+               else 
+                  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+               xmlhttp.onreadystatechange = function()
+                {
+                   if (this.readyState == 4 && this.status == 200) 
+                       document.getElementById("stream").innerHTML = this.responseText;
+                };
+               var course1= document.getElementById("course");
+               var course= course1[course1.selectedIndex].value;
+               xmlhttp.open("GET", "stream_list.php?temp=2&course_id="+course, true);
+               xmlhttp.send();
+           });
+
+}*/
+</script>             

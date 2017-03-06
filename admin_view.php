@@ -1,17 +1,20 @@
-<?php
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+<?php
 include("header.php");
 require_once("admin_query.php");
 require_once("db_connect.php");
 if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION['USER_ID']))
-{
+{ 
     if($_SESSION['LOGIN']==2 && $_SESSION['PASSWORD']==$verify  && $_SESSION['USER_ID']==10001)
     {
     ?>
 
 
     <main>
-       
+       <button class="logout btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" type="submit" name="action">Logout
+                
+</button> 
 
       <div class="row" style="margin-top:5px;">
         <div class="col s12">
