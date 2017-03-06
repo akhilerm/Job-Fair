@@ -170,7 +170,7 @@
                           <h6>above 65 percentage or 6.5</h6>
                         </div>
                       </div>
-                    </div>
+                    </div>Duplicate entry '1234512345' for key 'phone'
                   </div>
                 </div>
                 <div class="col s12 l3">

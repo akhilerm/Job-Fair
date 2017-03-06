@@ -15,7 +15,7 @@
 <body>
     <header>    
       <nav class="white navBar" role="navigation">
-        <div class="nav-wrapper"><a id="logo-container" href="index.php" class="brandLogo ">Logo</a>
+        <div class="nav-wrapper"><a id="logo-container" href="logout.php" class="brandLogo ">Logo</a>
           
         
         </div>

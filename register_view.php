@@ -6,20 +6,21 @@
   
  function validate()
   {	console.log("in validate");
-  var x = document.forms["regfrom"]["phone"].value;
+
+   var x = document.forms["regfrom"]["phone"].value;
    var p = document.forms["regfrom"]["password"].value;
    var rp = document.forms["regfrom"]["repassword"].value;
   	if(x.length!=10)
-   {   
+    {   
        alert("Please Enter a 10 digit Phone number");
        return false;
-   }
+    }
    if(p.length<8)
-       {
+   {
            alert("Password Must Contain Atleast 8 Characters");
            return false;
-       }
-   	if(p!==rp)
+   }
+   if(p!==rp)
    {    
        alert("Passwords Do Not Match");
        document.forms["regfrom"]["password"].value='';
@@ -27,7 +28,7 @@
        return false;
    }
    return true;
-  }
+}
 
 </script>
 <main>
@@ -92,7 +93,7 @@
                     <br />
                     <center>
                         <div class='row'>
-                            <button type='submit' onclick="return validate()" name='btn_login'   class='col s12 btn btn-large waves-effect colGreenbg'>Next</button>
+                            <button type='submit'  name='btn_login'   class='col s12 btn btn-large waves-effect colGreenbg'>Next</button>
                         </div>
                     </center>
                     <br>

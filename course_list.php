@@ -8,6 +8,9 @@
     {
       if($result->num_rows>0)
       {
+        ?>
+        <option value="" disabled selected> Select Course</option>
+         <?php
         while($row= $result->fetch_assoc())
         {
           ?>

@@ -1,9 +1,8 @@
 
 <?php
-//query to insert
-session_start();
 require_once("db_connect.php");
 require_once("query.php");
+session_create();
 
 $course=cleanup($_POST['course'],$con);
 $stream=cleanup($_POST['stream'],$con);
@@ -46,7 +45,7 @@ else if($mark_radio=='p')
 						$verify=insert_user($_SESSION['NEW_USER']['NAME'],$_SESSION['NEW_USER']['PASSWORD'],$course,$stream,$yop,$current_sem,$_SESSION['NEW_USER']['EMAIL'],$college,$_SESSION['NEW_USER']['PHONE'],$_SESSION['NEW_USER']['DOB'],$backlog,$cgpa,$percent,$sslc,$hsc,$con);
 		           		if($verify==-1)
 		           		{
-		           			$_SESSION['MESSAGE']="Couldn't Add You . Please Try Again";
+		           			$_SESSION['MESSAGE']="Couldn't Add You . You Might Have Already Registered With Same Credentials";
 		           			header("location:index.php?switch=register");
 		           			return;
 		           		}

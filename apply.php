@@ -22,7 +22,7 @@
 		    		$result=$con->query($query);
 					if($result)
 					{
-							echo "Successfully Applied For ".$company ;	
+							echo "Successfully Applied" ;	
 					}
 					else
 					{
