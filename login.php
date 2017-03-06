@@ -11,7 +11,7 @@
 		{
 			$password=sha1($password);
 			$verify=fetch_user($email,$password,$con);
-			if(($verify == $password) && ($email=='akhilerm@gmail.com'))          //admin panel
+			if(($verify == $password) && ($email=='pranavshenoy06@gmail.com'))          //admin panel
 			{
 				session_set_admin();
 				header("location:admin_panel.php");
@@ -19,7 +19,7 @@
 			}
 			if($verify==-1 || $verify != $password)
 			{
-				$_SESSION['MESSAGE']='This combination of email and password does not exist.';
+				$_SESSION['MESSAGE']='This Combination Of Email and Password Does Not Exist.';
 				header("location:index.php");
 				return;
 			}
@@ -32,9 +32,8 @@
 		}	
 		else
 		{
-			$_SESSION['MESSAGE']="ALL FIELDS ARE MANDATORY!";
+			$_SESSION['MESSAGE']="All Fields Are Mandatory";
 			header("location:index.php");	
-
 		}
 	}
 	else
