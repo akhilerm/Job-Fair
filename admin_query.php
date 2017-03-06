@@ -2,7 +2,7 @@
 	require_once("db_connect.php");
 	
 	function add_drive($course_id,$company_id,$backlog_active,$cgpa,$percent,$con){
-		$query = "INSERT INTO drives (company_id,course_id,backlog_active,cgpa,percent) VALUES ($course_id,$company_id,$backlog_active,$cgpa,$percent)";
+		$query = "INSERT INTO drives (company_id,course_id,backlog_active,cgpa,percent) VALUES ($company_id,$course_id,$backlog_active,$cgpa,$percent)";
 		$result = $con->query($query);
 		if($result)
 			return 1;

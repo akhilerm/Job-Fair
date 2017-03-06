@@ -161,27 +161,31 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
 
                              <div class="row">
                               <div class="input-field col s12">
-                                 <select style="display: block;border: 1px solid #9e9e9e" name="sem" id="sem">
-                                    <option value="" disabled selected>Select Company</option>
-                                    <option value="1" >Company</option>
+                                 <select style="display: block;border: 1px solid #9e9e9e" name="company3" id="company3">
+                                    <?php
+                                      $result = get_all_company($con);
+                                      $string="";
+                                      while($row=$result->fetch_assoc()){
+                                        $string=$string."<option value='".$row['id']."'>".$row['company_name']."</option>";
+                                      }
+                                      echo $string;
+                                    ?>
 
                                  </select>
                               </div>
                             </div>
                             <div class="row">
                               <div class="input-field col s12">
-                                 <select style="display: block;border: 1px solid #9e9e9e" name="cou" id="cou">
-                                    <option value="" disabled selected>Select Cource</option>
-                                    <option value="1" >Company</option>
+                                 <select style="display: block;border: 1px solid #9e9e9e" name="course3" id="course3">
+                                    <option value="" disabled selected>Select Course</option>
 
                                  </select>
                               </div>
                             </div>
                             <div class="row">
                               <div class="input-field col s12">
-                                 <select style="display: block;border: 1px solid #9e9e9e" name="str" id="str">
+                                 <select style="display: block;border: 1px solid #9e9e9e" name="stream3" id="stream3">
                                     <option value="" disabled selected>Select Stream</option>
-                                    <option value="1" >stream</option>
 
                                  </select>
                               </div>
@@ -409,3 +413,42 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
 else
   header("location:index.php");
 ?>
+<script type="text/javascript">
+   $(document).ready(function() {
+             //for loading list of courses
+             var xmlhttp;
+             if (window.XMLHttpRequest) 
+                 xmlhttp = new XMLHttpRequest();
+             else 
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+             xmlhttp.onreadystatechange = function()
+             {
+                 if (this.readyState == 4 && this.status == 200) 
+                     document.getElementById("course3").innerHTML = this.responseText;
+             };
+             var compid  = document.getElementById("company3")[document.getElementById("company3").selectedIndex].value;
+             alert(compid);
+             xmlhttp.open("GET", "course_list.php?comp="+compid, true);
+             xmlhttp.send();
+             
+             // display list of courses in the drive for the company
+             $('#course3').change(function() {
+               var xmlhttp;           
+               if (window.XMLHttpRequest) 
+                   xmlhttp = new XMLHttpRequest();
+               else 
+                  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+               xmlhttp.onreadystatechange = function()
+                {
+                   if (this.readyState == 4 && this.status == 200) 
+                   {
+                       document.getElementById("stream3").innerHTML = this.responseText;
+                   }
+                };
+               var course1= document.getElementById("course");
+               var course= course1[course1.selectedIndex].value;
+               xmlhttp.open("GET", "stream_list.php?temp=2&course_id="+course, true);
+               xmlhttp.send();
+           });
+   });
+</script>

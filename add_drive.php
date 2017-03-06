@@ -7,4 +7,5 @@
 	$cgpa = $_POST['cgpa'];
 	$perc = $_POST['perc'];
 	add_drive($course_id,$company_id,$backlog,$cgpa,$perc,$con);
+	header("location:index.php/admin_view.php");
 ?>
