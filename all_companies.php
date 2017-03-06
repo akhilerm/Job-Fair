@@ -33,10 +33,11 @@
                         
                     
                     </tbody>
-		}
+		<?php
+    }
 	}
 	else{
-
+       ?><h6>Not Available</h6><?php
 	}
 
 ?>

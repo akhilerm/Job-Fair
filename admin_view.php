@@ -10,10 +10,11 @@ require_once("db_connect.php");
     ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <main>
-       <button class="logout btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" window.location="logout.php">Logout
+       <a class="logout btn-flat waves-effect waves-light" href = "logout.php" style="border:1px solid #00d494;color:#00d494" window.location="logout.php">Logout
                 
-</button> 
+</a> 
 
       <div class="row" style="margin-top:5px;">
         <div class="col s12">
@@ -180,20 +181,19 @@ require_once("db_connect.php");
               }); 
             }
           });
-          $('#search_button').on('click'),function(){
-            var cmpid=$('#company4').val();
-            if(cmpid){
+                  
+        });
+        function get_applied(){
+              var company4_id=$('#company4').val();
               $.ajax({
               type:'POST',
               url:'all_companies.php',
-              data:'cmpID='+cmpID,
+              data:'cmpID='+company4_id,
               success:function(html){
                 $('#fill_table').html(html);
               }
               }); 
-            }
-          }        
-        });
+          } 
         </script>
         <div id="test3" class="col s12">
           
@@ -274,7 +274,7 @@ require_once("db_connect.php");
                         
                             <div class="row">
                                  <div class="col s12">
-                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" name="search_button" id="search_button">Search
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" name="search_button" id="search_button" onclick="get_applied()">Search
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>
