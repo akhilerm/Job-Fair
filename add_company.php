@@ -1,7 +1,12 @@
 <?php
+	session_start();
 	require("db_connect.php");
 	require("admin_query.php");
+	require("query.php");
 	$company_name=$_POST['full_name'];
 	$result=add_company($con);
-	header("location:index.php/admin_view.php");
+	$_SESSION['PASSWORD']=fetch_by_id(10001,$con);
+	$_SESSION['LOGIN']==2;
+	$_SESSION['USER_ID']==10001;
+	header("location:admin_panel.php");
 ?>

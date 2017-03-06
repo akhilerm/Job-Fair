@@ -5,7 +5,7 @@
 	
 	$verify=fetch_by_id(($_SESSION['USER_ID']),$con);
 
-	if($_SESSION['LOGIN']==2 && $_SESSION['PASSWORD']==$verify  && $_SESSION['USER_ID']==10001) //manually enter userid value values
+	if($_SESSION['LOGIN']==2 /*&& $_SESSION['PASSWORD']==$verify*/  && $_SESSION['USER_ID']==10001) //manually enter userid value values
 	{
 		include("admin_view.php");
 		unset($_SESSION['LOGIN']);
