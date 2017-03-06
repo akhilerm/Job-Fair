@@ -194,6 +194,15 @@
 <script type="text/javascript">
    $(document).ready(function() {
              //for loading list of courses
+                  $.ajax({
+                    type:'POST',
+                    url:'course_list.php',
+                    success:function(html){
+                      $('#course').html(html);
+                    }
+                  }); 
+
+
              var xmlhttp;
              if (window.XMLHttpRequest) 
                  xmlhttp = new XMLHttpRequest();

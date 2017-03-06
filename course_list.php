@@ -1,18 +1,33 @@
 <?php 
-  session_start();
   require_once("db_connect.php");
   require_once("query.php");
-  if($_GET['temp']==1 && $_SESSION['FLAG_COURSE']==1)
-  {
-      $_SESSION['FLAG_COURSE']==0;
-      $result=fetch_courses($con);
-      if($result!=-1)
-        echo '<option value="" disabled selected>Select Course</option>'.$result;
-  }
-  else
-  {
-    header("location:index.php");
-    return;
-  }
+  
+  $query="select * from course";
+  $result=$con->query($query);
+    if($result)
+    {
+      if($result->num_rows>0)
+      {
+        while($row= $result->fetch_assoc())
+        {
+          ?>
+          <option value="<?php echo $row['id'] ?>"> <?php echo  $row['course_name']?> </option>
+          <?php
+        }
+      }
+      else
+      {
+        ?>
+        <option value="" disabled selected>No Courses</option>
+        <?php
+      }
+    }
+    else
+    {
+      ?>
+      <option value="" disabled selected>No Courses 1</option>  
+      <?php  
+    }    
+
 
 ?>
