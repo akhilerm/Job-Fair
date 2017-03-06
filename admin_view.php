@@ -149,6 +149,9 @@ require_once("db_connect.php");
           </div>  
 
         </div>
+        <?php
+        $_SESSION['FLAG_STREAM']=2;
+        ?>
          <script> 
          $(document).ready(function(){
           $('#company3').on('change',function(){
@@ -163,7 +166,21 @@ require_once("db_connect.php");
                 }
               }); 
             }
-          });         
+          });
+          $('#course3').on('change',function(){
+            var crID = $(this).val();
+            var d1=2;
+            if(crID){
+              $.ajax({
+                type:'POST',
+                url:'stream_list.php',
+                data:'crID='+crID,
+                success:function(html){
+                  $('#stream3').html(html);
+                }
+              }); 
+            }
+          });        
         });
         </script>
         <div id="test3" class="col s12">
@@ -197,7 +214,7 @@ require_once("db_connect.php");
                             <div class="row">
                               <div class="input-field col s12">
                                  <select style="display: block;border: 1px solid #9e9e9e" name="stream3" id="stream3">
-                                    <option value="" disabled selected>Select   Stream</option>
+                                    <option value="0">Select Stream</option>
 
                                  </select>
                               </div>

@@ -80,15 +80,7 @@
 		$result=$con->query($query);
 		if($result)
 		{
-			if($result->num_rows>0)
-			{
-				$string='';
-				while($row= $result->fetch_assoc())
-					$string.='<option value='.$row['id'].'>'.$row['stream_name'].'</option>';
-				return $string;
-			}
-			else
-				return -1;
+			return $result;
 		}
 		else
 			return -1;
