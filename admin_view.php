@@ -9,6 +9,7 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
     {
     ?>
 
+
     <main>
        
 
@@ -55,14 +56,14 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
                     
                    <tr>
                     <td>
-                      <form action="" method="POST">
+                      <form action="add_company.php" method="POST">
                         <div class="row">
                             <div class="input-field col s8">
                                 <input  id="full_name" name="full_name" type="text" class="validate" required="" aria-required="true">
                                 <label for="first_name">Company Name</label>
                             </div>
                             <div class="col s4">
-                                  <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" id="add_c" type="button" onClick="">Add
+                                  <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" id="add_c" type="submit">Add
                                     <i class="material-icons right">send</i>
                                   </button> 
                             </div>
@@ -72,57 +73,7 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
                 </tbody>
               </table>
       
-    </div>
-      
-      
-      
-      
-    <div id="test2" class="col s12">
-        <div class="profileCard" style="margin:0 auto;">
-        <div class="card-panel">
-            
-            <form>
-            
-                 <div class="row">
-                  <div class="input-field col s12">
-                     <select style="display: block;border: 1px solid #9e9e9e" name="sem" id="sem">
-                        <option value="" disabled selected>Select Company</option>
-                        <option value="1" >Company</option>
-                       
-
-                      </tr>
-                      <tr>
-                        <td>Jonathan</td>
-                        
-                       
-                      </tr> -->
-                      <?php
-                        $result=get_all_company($con);
-                        while($row = $result->fetch_assoc()){
-                          echo "<tr><td>".$row['company_name']."</td></tr>";
-                        }
-                      ?>
-                        
-                       <tr>
-                        <td>
-                            <div class="row">
-                                <div class="input-field col s8">
-                                    <input  id="full_name" name="full_name" type="text" class="validate" required="" aria-required="true">
-                                    <label for="first_name">Company Name</label>
-                                </div>
-                                <div class="col s4">
-                                      <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" id="add_c" type="button" onClick="addcomp()">Add
-                                        <i class="material-icons right">send</i>
-                                      </button> 
-                                </div>
-                            </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-          
-        </div>
-          
+    </div>     
           
           
           
@@ -130,22 +81,32 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
             <div class="profileCard" style="margin:0 auto;">
             <div class="card-panel">
                 
-                <form>
+                <form action="add_drive.php" method="POST">
                 
                      <div class="row">
                       <div class="input-field col s12">
-                         <select style="display: block;border: 1px solid #9e9e9e" name="sem" id="sem">
-                            <option value="" disabled selected>Select Company</option>
-                            <option value="1" >Company</option>
-                           
+                         <select style="display: block;border: 1px solid #9e9e9e" name="company2" id="company2">
+                            <?php
+                                $result = get_all_company($con);
+                                $string="";
+                                while($row=$result->fetch_assoc()){
+                                  $string=$string."<option value='".$row['id']."'>".$row['company_name']."</option>";
+                                }
+                                echo $string;
+                            ?>
+                                                       
                          </select>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
-                         <select style="display: block;border: 1px solid #9e9e9e" name="cour" id="cour">
-                            <option value="" disabled selected>Select Cource</option>
-                            <option value="1" >Company</option>
+                         <select style="display: block;border: 1px solid #9e9e9e" name="course2" id="course2">
+                            <?php
+                              $courses=get_all_courses($con); 
+                              while ($row2=$courses->fetch_assoc()) {
+                                echo '<option value = '.$row2['id'].'>'.$row2['course_name'].'</option>';
+                              }
+                            ?>
                            
                          </select>
                       </div>
@@ -172,7 +133,7 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
                     
                     <div class="row">
                          <div class="col s12">
-                                      <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action">Add
+                                      <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="sub_button2  ">Add
                                         <i class="material-icons right">send</i>
                                       </button> 
                         </div>
@@ -438,6 +399,8 @@ if(isset($_SESSION['LOGIN']) && isset($_SESSION['PASSWORD']) && isset($_SESSION[
     <?php
     include("footer.php");
     ?>
+
+    
     <?php
     }
     else

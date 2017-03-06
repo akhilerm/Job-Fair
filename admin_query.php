@@ -1,8 +1,8 @@
 <?php
 	require_once("db_connect.php");
 	
-	function add_drive($course_id,$company_id,$backlog_history,$backlog_active,$cgpa,$percent,$con){
-		$query = "INSERT INTO drives (company_id,course_id,backlog_history,backlog_active,cgpa,percent) VALUES ($course_id,$company_id,$backlog_history,$backlog_active,$cgpa,$percent)";
+	function add_drive($course_id,$company_id,$backlog_active,$cgpa,$percent,$con){
+		$query = "INSERT INTO drives (company_id,course_id,backlog_active,cgpa,percent) VALUES ($course_id,$company_id,$backlog_active,$cgpa,$percent)";
 		$result = $con->query($query);
 		if($result)
 			return 1;
@@ -21,6 +21,12 @@
 
 	function add_company($con){
 		$company_name = $_POST['full_name'];
+		$query = "INSERT INTO `company` (`id`, `company_name`) VALUES (NULL, '$company_name');";
+		$result = $con->query($query);
+		if($result)
+			return 1;
+		else
+			return  0; 
 	}
 
 	function get_company_name($company_id,$con){
@@ -35,13 +41,19 @@
 	}
 
 	function get_all_company($con){
-		$query = "SELECT company_name from company";
+		$query = "SELECT * from company";
 		$result = $con->query($query);
 		if($result){
 			return $result;
 		}
 		else
 			return 0;
+	}
+
+	function get_all_courses($con){
+		$query = "SELECT * FROM course";
+		$result = $con->query($query);
+		return $result;
 	}
 
 	function search_user($email,$phone,$user_id,$con){

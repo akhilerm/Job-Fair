@@ -7,7 +7,7 @@
       $_SESSION['FLAG_COURSE']==0;
       $result=fetch_courses($con);
       if($result!=-1)
-        echo '<option value="" disabled selected>Select Stream</option>'.$result;
+        echo '<option value="" disabled selected>Select Course</option>'.$result;
   }
   else
   {
