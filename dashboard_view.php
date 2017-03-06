@@ -461,23 +461,47 @@
                         <hr class="style1">
                       
                     </thead>
-
                     <tbody>
-                      <tr>
-                        <td>Alvin</td>
-                        <td>Eclair</td>
-                     
-                      </tr>
-                      <tr>
-                        <td>Alan</td>
-                        <td>Jellybean</td>
-                   
-                      </tr>
-                      <tr>
-                        <td>Jonathan</td>
-                        <td>Lollipop</td>
-                      
-                      </tr>
+                      <?php
+                          $query_user="select * from user as u,course as c, stream as s where u.course=c.id and u.stream=s.id and u.id=".$_SESSION['USER_ID'];
+                          $result_user=$con->query($query_user);
+                          if($result_user)
+                          {
+                            $row1=$result_user->fetch_assoc();
+                            echo 
+                             "<tr>
+                                <td class='colGreen'>Name:</td>
+                                <td>".$row1['name']."</td></tr>
+                              <tr>
+                                <td class='colGreen'>Course:</td>
+                                <td>".$row1['course_name']."</td>
+                              </tr>
+                              <tr>
+                                <td class='colGreen'>Stream:</td>
+                                <td>".$row1['stream_name']."</td>
+                              </tr>
+                              <tr>
+                                <td class='colGreen'>Year Of Pass:</td>
+                                <td>".$row1['yop']."</td></tr>
+                              <tr>
+                                <td class='colGreen'>Email:</td>
+                                <td>".$row1['email']."</td>
+                              </tr>
+                              <tr>
+                                <td class='colGreen'>College:</td>
+                                <td>".$row1['college']."</td>
+                              </tr>
+                              <tr>
+                                <td class='colGreen'>Phone:</td>
+                                <td>".$row1['phone']."</td>
+                              </tr>";
+
+                          }
+                          else
+                          {
+                            echo "Welcome";
+                          }
+                      ?>
                     </tbody>
                   </table>
               </div>
