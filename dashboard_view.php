@@ -1,7 +1,6 @@
 <?php
   include("header.php");
   require_once("db_connect.php");
-  //require_once("query.php");
   if(session_check()==true)
   {
     if($_SESSION['LoggedINUser']==1)
@@ -18,6 +17,7 @@
               $result=$con->query($query);
               if($result->num_rows>0)
               {
+                $count=0;
                 $string.='<table class="driveTable striped centered">
                           <thead>
                             <tr >
@@ -27,8 +27,10 @@
                             </tr>
                           </thead>
                           <tbody class="colGreen">';
+                $count=0;
                 while($row_comp=$result->fetch_assoc())
                 {
+                  $count++;
                   $string.='<tr >
                       <td>'.$row_comp['company_name'].'</td>';
                   if($row['backlog']<=$row_comp['backlog_active'] && ($row['cgpa']>=$row_comp['cgpa'] || $row['percent']>=$row_comp['percent'])) 
@@ -36,7 +38,7 @@
                       $_SESSION['APPLY_FLAG']=1;
                       $_SESSION['COMPANY_ID']=$row_comp['company_id'];
                       $string.='<td>Eligible</td>  
-                      <td> <button class="btn-flat waves-effect waves-light" value="'.$_SESSION["COMPANY_ID"].'"  style="border:1px solid #00d494;color:#00d494" type="submit" name="action" id="action">Apply
+                      <td> <button class="btn-flat waves-effect waves-light" value="'.$_SESSION["COMPANY_ID"].'" onclick="apply('.$_SESSION["COMPANY_ID"].','.$count.')"  style="border:1px solid #00d494;color:#00d494" type="submit" name="action" id="action">Apply
                       <i class="material-icons right">send</i>
                       </button> </td> ';
                     }
@@ -59,8 +61,8 @@
             $string.='Currently There are No drives';
 ?>
       <main>
-        <button class="logout btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" type="submit" name="action">Logout
-        </button> 
+        <a href="logout.php" class="logout btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" name="action1" >Logout
+        </a> 
         <div class="container-fluid">
           <div class="row" style="margin-top:5px;">
             
@@ -390,19 +392,18 @@
 ?>
 
 <script>
-$(document).ready(function() {
-  $('#action').on('click',function(){
-    var comp_id=$('#action').val();
-    $.ajax({
-      type:'POST',
-      url:'apply.php',
-      data:'C_ID='+comp_id,
-      success:function(html){
-        $(this).attr('disabled', 'disabled');                           //check
-        alert(html);
-      }
-    });
+function apply(company_id,count)
+{
+  $(document).ready(function() {
+      $.ajax({
+        type:'POST',
+        url:'apply.php',
+        data:'C_ID='+comp_id,
+        success:function(html){
+          $(this).attr('disabled', 'disabled');                           //check
+          alert(html);
+        }
+      });
   });
-
-});
+}
 </script>
