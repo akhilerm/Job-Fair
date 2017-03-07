@@ -415,24 +415,24 @@ require_once("db_connect.php");
                 while($row=$query->fetch_assoc()){
                   ?><div class="col s12 l3">
                     <div class="card-panel">
-                       <h5 style="text-align:center"> <?php $row['company_name'] ?> </h5>
+                       <h5 style="text-align:center">?>$row['company_name']<?php</h5>
                         <hr>
                         <table>
                             <tr>
                                 <td>Course</td>
-                                <td><?php $row['course_name'] ?> </td>
+                                <td>?>$row['course_name']<?php</td>
                             </tr>
                              <tr>
                                 <td>CGPA</td>
-                                <td> <?php $row['cgpa'] ?> </td>
+                                <td>?>$row['cgpa'] <?php</td>
                             </tr>
                              <tr>
                                 <td>Percentage</td>
-                                <td> <?php $row['percent'] ?> </td>
+                                <td>?>$row['percent'] <?php</td>
                             </tr>
                             <tr>
                                 <td>Backlog</td>
-                                <td> <?php $row['backlog_active'] ?> </td>
+                                <td>?>$row['backlog_active'] <?php</td>
                             </tr>
                             
                         </table>
@@ -440,7 +440,28 @@ require_once("db_connect.php");
                   </div><?php
                 }
                 ?>
-              </div>
+                  <!-- <div class="col s12 l3">
+                    <div class="card-panel">
+                       <h5 style="text-align:center">Company Name</h5>
+                        <hr>
+                        <table>
+                            <tr>
+                                <td>Btech</td>
+                                <td>Civil</td>
+                            </tr>
+                             <tr>
+                                <td>Btech</td>
+                                <td>EEE</td>
+                            </tr>
+                             <tr>
+                                <td>Btech</td>
+                                <td>CS</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                  </div> -->
+                </div>
         
          </div> 
             
