@@ -9,9 +9,12 @@
 		{
 			$company_id = $_POST['company2'];
 			$course_id = $_POST['course2'];
-			$backlog = $_POST['backlog'];
-			$cgpa = $_POST['cgpa'];
-			$perc = $_POST['perc'];
+			if(!empty($_POST['backlog']))   $backlog = $_POST['backlog'];
+			else $backlog = 0;
+			if(!empty($_POST['cgpa']))  $cgpa = $_POST['cgpa'];
+			else  $cgpa =0;
+			if(!empty($_POST['perc']))   $perc = $_POST['perc'];
+			else  $perc = 0;
 			add_drive($course_id,$company_id,$backlog,$cgpa,$perc,$con);
 			header("location:admin_panel.php");
 		}

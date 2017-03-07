@@ -36,19 +36,19 @@ require_once("db_connect.php");
 
         <?php
             require_once("db_connect.php");
-            $query="SELECT id,name,college,email,phone,trans_id from user ";
+            $query="SELECT id,name,college,email,phone,trans_id,`time` from user ";
             $result = $con->query($query);
             if($result->num_rows>0)
             {
               echo "<table class='colGreen driveTable striped'>";
               echo "<tr>";
-              echo "<th>REG ID</th><th>NAME</th><th>COLLEGE</th><th>EMAIL</th><th>PHONE</th><th>TRANS_ID</th>";
+              echo "<th>REG ID</th><th>NAME</th><th>COLLEGE</th><th>EMAIL</th><th>PHONE</th><th>TRANS_ID</th><th>TIME</th>";
               echo "</tr>";
               
               while($row=$result->fetch_assoc())
               {
                 echo "<tr>";
-                echo "<td>".$row['id']."</td><td>".$row['name']."</td><td>".$row['college']."</td><td>".$row['email']."</td><td>".$row['phone']."</td><td>".$row['trans_id']."</td><td>";
+                echo "<td>".$row['id']."</td><td>".$row['name']."</td><td>".$row['college']."</td><td>".$row['email']."</td><td>".$row['phone']."</td><td>".$row['trans_id']."</td><td>".$row['time']."</td>";
                 echo "</tr>";
               }   
               echo "</table>";

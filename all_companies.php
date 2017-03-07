@@ -9,46 +9,23 @@
     	$company_id = $_POST['cmpID'];
     	$query = "SELECT user.name,course.course_name,user.email,user.phone,user.trans_id from course,user,applied where applied.student_id=user.id and course.id=user.course and applied.company_id = $company_id";
     	$result=$con->query($query);
-    	if($result){
-    		while($row=$result->fetch_assoc()){
-    			?><tbody class="colGreen">
-                          <tr >
-                            <td>Name</td>
-                            <td><?php echo $row['name'];  ?></td>
-                              
-                          </tr>
-                          
-                          <tr>
-                            <td>Course</td>
-                            <td><?php echo  $row['course_name']; ?></td>
-                           
-                          </tr>
-                            
-                          <tr>
-                            <td>Email</td>
-                            <td><?php echo $row['email'];  ?></td>
-                           
-                          </tr>
-                            
-                          <tr>
-                            <td>Phone</td>
-                            <td><?php echo  $row['phone']; ?></td>
-                           
-                          </tr>
-                          <tr>
-                            <td>Transaction</td>
-                            <td><?php echo  $row['trans_id']; ?></td>
-                           
-                          </tr>
-                            
-                        
-                        </tbody>
-    		<?php
-        }
-    	}
-    	else{
-           ?> <h6>Not Available</h6> <?php
-    	}
+    	if($result->num_rows>0)
+            {
+              echo "<table class='colGreen driveTable striped'>";
+              echo "<tr>";
+              echo "<th>NAME</th><th>COURSE</th><th>EMAIL</th><th>PHONE</th><th>TRANS_ID</th>";
+              echo "</tr>";
+              
+              while($row=$result->fetch_assoc())
+              {
+                echo "<tr>";
+                echo "<td>".$row['name']."</td><td>".$row['course_name']."</td><td>".$row['email']."</td><td>".$row['phone']."</td><td>".$row['trans_id']."</td>";
+                echo "</tr>";
+              }   
+              echo "</table>";
+            }
+            else
+              echo "NO BODY HAS APPLIED";
     }
     else
       header("location:index.php");
