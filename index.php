@@ -10,6 +10,7 @@
     {   
         header("location:user_account.php"); 
     }   
+
     if(!empty($_GET['switch']))
     {
     	if($_GET['switch']=='register')
