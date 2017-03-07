@@ -362,45 +362,7 @@
                     </div>
                   </div>
                 </div>
-                  
-                  
-                  
-                        <div class="col s12 l3">
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="images/mut.jpg" style="border-bottom:1px solid #00d494">
-                    </div>
-                    <div class="card-content">
-                      <div class="row">
-                        <h5 class="center-align colGreen">MUTHOOT PAPPACHAN TECHNOLOGIES LIMITED </h5>
-                        <hr class="style1">
-                        <div class="col s12 l12">
-                          <h6 class="colGreen">CTC</h6>
-                        </div>
-                        <div class="col s12 l12">
-                          <h6>To be decided </h6>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col s12 l12">
-                          <h6 class="colGreen">Who can apply</h6>
-                        </div>
-                        <div class="col s12 l12">
-                          <h6>B.tech:Computer scince <br>MCA/BCA</h6>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col s12 l12">
-                          <h6 class="colGreen">Eligibility</h6>
-                        </div>
-                        <div class="col s12 l12">
-                          <h6>Above 70 or 7.0 cgpa</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  
+                                 
                 
               </div>
                 
