@@ -115,6 +115,10 @@
                             <h6>Perfomatix, Cognub, Fazza, Corporate 360 will conduct interview on 17-03-2017 at TKMCE</h6>
                             <br>
                           </li>
+                          <li>
+                            <h6>For Queries:<br>Rahul N R : 9400326063<br>Rahul S Shibu : 8129413503</h6>
+                            <br>
+                          </li>
                         </ul>
                       </div>
                     </div>
