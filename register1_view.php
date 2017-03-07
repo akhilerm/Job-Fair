@@ -1,45 +1,45 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
-         function validate()
-          { 
-           var c = document.forms["regform"]["mark"].value;
-           var cg = document.forms["regform"]["c_p"].value;
-           var s = document.forms["regform"]["sslc"].value;
-           var h = document.forms["regform"]["hsc"].value;
-           var f = document.forms["regform"]["file_up"].value;   
-           if(c=="c")
-           {   if(cg>10)
-               {
-                 alert("Please Enter a valid CGPA");
-                 return false;
-               }
+     function validate()
+      { 
+       var c = document.forms["regform"]["mark"].value;
+       var cg = document.forms["regform"]["c_p"].value;
+       var s = document.forms["regform"]["sslc"].value;
+       var h = document.forms["regform"]["hsc"].value;
+       var f = document.forms["regform"]["file_up"].value;   
+       if(c=="c")
+       {   if(cg>10)
+           {
+             alert("Please Enter a valid CGPA");
+             return false;
            }
-           if(c=="p")
-           {   if(cg>100)
-               {
-                 alert("Please Enter a valid Percentage");
-                 return false;
-               }
+       }
+       if(c=="p")
+       {   if(cg>100)
+           {
+             alert("Please Enter a valid Percentage");
+             return false;
            }
-           if(cg>100)
-           {   
-               alert("Please Enter a valid Percentage");
-               return false;
-           }
-           if((s>100)||(h>100))
-           {  
-               alert("Please Enter a valid Percentage");
-               return false;
-           }
-           
-           if( f.indexOf('.pdf') < 0)
-           { 
-              alert("Please Enter a valid pdf file");
-              return false;
-           }
-           return true;
-              
-          }
+       }
+       if(cg>100)
+       {   
+           alert("Please Enter a valid Percentage");
+           return false;
+       }
+       if((s>100)||(h>100))
+       {  
+           alert("Please Enter a valid Percentage");
+           return false;
+       }
+       
+       if( f.indexOf('.pdf') < 0)
+       { 
+          alert("Please Enter a valid pdf file");
+          return false;
+       }
+       return true;
+          
+      }
   </script>
 <?php
    require_once('db_connect.php');
@@ -218,7 +218,8 @@
                 </div>
                 <center>
                   <div class='row'>
-                    <a  href="https://paytm.com" target="_blank" name='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
+                    <label for="btn_pay" class="">Paytm Account Number<br><span> +91 9567016262</span></label>
+                    <a  href="https://paytm.com" target="_blank" name='btn_pay' id='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
                   </div>
                 </center>
                 <div class="row">
