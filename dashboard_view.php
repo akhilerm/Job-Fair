@@ -86,12 +86,13 @@
                       </div>
                       <div class="row colGreen" style="font-weight:bold;">
                         <ul style="padding-left:24px;">
+
                           <li>
-                            <h6>Those who want to attend software companies(except Allianz and Toonz animations) should appear for aptitude test on 16-03-2017.</h6>
+                            <h6>All applicants should report at 8:30AM on 16-03-2017.</h6>
                             <br>
                           </li>
                           <li>
-                            <h6>All applicants should report at 8:30 on 16-03-2017.</h6>
+                            <h6>Those who want to attend software companies(except Allianz and Toonz animations) should appear for aptitude test on 16-03-2017.</h6>
                             <br>
                           </li>
                           <li>
@@ -103,7 +104,7 @@
                             <br>
                           </li>
                           <li>
-                            <h6>Srishti Inoovative and Pivot Systems will conduct test on 16-03-2017. Interview will be conducted at Technopark,TVM on other dates.</h6>
+                            <h6>Srishti Innovative and Pivot Systems will conduct test on 16-03-2017. Interview will be conducted at Technopark,TVM on other dates.</h6>
                             <br>
                           </li>
                             <li>
@@ -112,10 +113,6 @@
                           </li>
                           <li>
                             <h6>Perfomatix, Cognub, Fazza, Corporate 360 will conduct interview on 17-03-2017 at TKMCE</h6>
-                            <br>
-                          </li>
-                          <li>
-                            <h6></h6>
                             <br>
                           </li>
                         </ul>
@@ -144,7 +141,7 @@
                           <h6 class="colGreen">Who can apply</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>All graduates and non graduates(Plus two/VHSE/Diploma)</h6>
+                          <h6>All graduates (2016/17 passouts) and non graduates(Plus two/VHSE/Diploma)</h6>
                         </div>
                       </div>
                       <div class="row">
@@ -180,7 +177,7 @@
                           <h6 class="colGreen">Who can apply</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>B.tech:Computer scince ,Electronics and communication and Electrical and electronics enginnering<br>Bsc/Msc:Computer scince <br>MCA/BCA</h6>
+                          <h6>B.Tech:Computer Science ,Electronics and Communication,Electrical and Electronics Engineering<br>Bsc/Msc:Computer Science <br>MCA/BCA  <br>(2016/17 passouts)</h6>
                         </div>
                       </div>
                       <div class="row">
@@ -215,7 +212,7 @@
                           <h6 class="colGreen">Who can apply</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>B.tech : Computer sceince <br>Bsc/Msc :computer scince<br>BCA and MCA</h6>
+                          <h6>B.Tech : Computer science <br>Bsc/Msc :computer science<br>BCA and MCA<br>(2016/17 passouts)</h6>
                         </div>
                       </div>
                       <div class="row">
@@ -254,7 +251,7 @@
                           <h6 class="colGreen">Who can apply</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>All graduates </h6>
+                          <h6>All graduates <br>(2016/17 passouts)</h6>
                         </div>
                       </div>
                              <br>
@@ -295,9 +292,9 @@
                           <h6 class="colGreen">Who can apply</h6>
                         </div>
                         <div class="col s12 l12" >
-                          <h6>For B.tech/M.tech: computer scince ,electronics and communication <br><span style="font-size:12px;"> Android Developer(2)
-                            Php developers,Asp.Net Developers,Web designers<br>MCA/BCA -Asp.Net Developers <br>Bsc/Msc/Bcom :Jr. Admin Executive
-                            Sales Excutives</span>
+                          <h6>For B.Tech/M.Tech: Computer Science ,Electronics and Communication <br><span style="font-size:12px;"> Android Developer(2)
+                            PHP developers,Asp.Net Developers,Web Designers<br>MCA/BCA -Asp.Net Developers <br>Bsc/Msc/Bcom :Jr. Admin Executive
+                            Sales Excutives<br>(2016/17 passouts)</span>
                           </h6>
                         </div>
                       </div>
@@ -333,7 +330,7 @@
                           <h6 class="colGreen">Who can apply</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>B-tech: Computer science,Electronics and Communication<br>M-tech:Computer Science Engineering ,Communication Systems<br> Bsc/Msc : Computer science<br>BCA and MCA </h6>
+                          <h6>B-tech: Computer science,Electronics and Communication<br>M-tech:Computer Science Engineering ,Communication Systems<br> Bsc/Msc : Computer science<br>BCA and MCA <br>(2016/17 passouts)</h6>
                         </div>
                       </div>
                       <div class="row">
@@ -368,7 +365,7 @@
                           <h6 class="colGreen">Who can apply</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>B.tech:Computer scince <br>MCA/BCA</h6>
+                          <h6>B.Tech:Computer Science <br>MCA/BCA<br>(2016/17 passouts)</h6>
                         </div>
                       </div>
                       <div class="row">
@@ -414,7 +411,7 @@
                           <h6 class="colGreen">Who can apply</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>B.tech:Computer scince <br>MCA/BCA</h6>
+                          <h6>B.Tech/MTech:Computer Science,Electronics and Communication,<br>BSc/MSc:ComputerScience <br>MCA/BCA<br>(2016/17 passouts)</h6>
                         </div>
                       </div>
                       <div class="row">
@@ -422,7 +419,7 @@
                           <h6 class="colGreen">Eligibility</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>Above 70 or 7.0 cgpa</h6>
+                          <h6>Above 55% or 5.5 CGPA</h6>
                         </div>
                       </div>
                     </div>
