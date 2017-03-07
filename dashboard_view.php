@@ -87,15 +87,35 @@
                       <div class="row colGreen" style="font-weight:bold;">
                         <ul style="padding-left:24px;">
                           <li>
-                            <h6>orem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elit</h6>
+                            <h6>Those who want to attend software companies(except Allianz and Toonz animations) should appear for aptitude test on 16-03-2017.</h6>
                             <br>
                           </li>
                           <li>
-                            <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elitLorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+                            <h6>All applicants should report at 8:30 on 16-03-2017.</h6>
                             <br>
                           </li>
                           <li>
-                            <h6>Aliquam tincidunt mauris eu risus.</h6>
+                            <h6>One candidate can apply for a maximum of 4 companies.</h6>
+                            <br>
+                          </li>
+                          <li>
+                            <h6>Candidates should bring 4 passport size photos along with 4 copies of resume.</h6>
+                            <br>
+                          </li>
+                          <li>
+                            <h6>Srishti Inoovative and Pivot Systems will conduct test on 16-03-2017. Interview will be conducted at Technopark,TVM on other dates.</h6>
+                            <br>
+                          </li>
+                            <li>
+                            <h6>Allianz and Toonz Animations will conduct interview on 16-03-2017 at TKMCE</h6>
+                            <br>
+                          </li>
+                          <li>
+                            <h6>Perfomatix, Cognub, Fazza, Corporate 360 will conduct interview on 17-03-2017 at TKMCE</h6>
+                            <br>
+                          </li>
+                          <li>
+                            <h6></h6>
                             <br>
                           </li>
                         </ul>
