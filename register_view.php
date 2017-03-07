@@ -3,7 +3,6 @@
 <body>
 <script type="text/javascript">
   
-  
  function validate()
   {	
        var x = document.forms["regfrom"]["phone"].value;
@@ -27,7 +26,7 @@
            return false;
        }
        return true;
-}
+  }
 
 </script>
 <main>

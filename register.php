@@ -9,6 +9,8 @@ $stream=cleanup($_POST['stream'],$con);
 $yop=cleanup($_POST['yop'],$con);
 $college=cleanup($_POST['college'],$con);
 $sslc=cleanup($_POST['sslc'],$con);
+if(!empty($_POST['trans_id']))
+	$trans_id=cleanup($_POST['trans_id'],$con);
 
 if($course!=108)
 {
@@ -54,7 +56,7 @@ else
 					$ext = pathinfo($filename, PATHINFO_EXTENSION);
 					if($ext=='pdf')
 					{	
-						$verify=insert_user($_SESSION['NEW_USER']['NAME'],$_SESSION['NEW_USER']['PASSWORD'],$course,$stream,$yop,$current_sem,$_SESSION['NEW_USER']['EMAIL'],$college,$_SESSION['NEW_USER']['PHONE'],$_SESSION['NEW_USER']['DOB'],$backlog,$cgpa,$percent,$sslc,$hsc,$con);
+						$verify=insert_user($_SESSION['NEW_USER']['NAME'],$_SESSION['NEW_USER']['PASSWORD'],$course,$stream,$yop,$current_sem,$_SESSION['NEW_USER']['EMAIL'],$college,$_SESSION['NEW_USER']['PHONE'],$_SESSION['NEW_USER']['DOB'],$backlog,$cgpa,$percent,$sslc,$hsc,$trans_id,$con);
 		           		if($verify==-1)
 		           		{
 		           			$_SESSION['MESSAGE']="Couldn't Add You . You Might Have Already Registered With Same Credentials";
@@ -84,7 +86,7 @@ else
 							}
 							else
 							{
-								$_SESSION['MESSAGE']="Registration Failed.";
+								$_SESSION['MESSAGE']="This File Already Exists";
 		           				header("location:index.php?switch=register");
 		           				return ;
 							}

@@ -1,3 +1,46 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+         function validate()
+          { 
+           var c = document.forms["regform"]["mark"].value;
+           var cg = document.forms["regform"]["c_p"].value;
+           var s = document.forms["regform"]["sslc"].value;
+           var h = document.forms["regform"]["hsc"].value;
+           var f = document.forms["regform"]["file_up"].value;   
+           if(c=="c")
+           {   if(cg>10)
+               {
+                 alert("Please Enter a valid CGPA");
+                 return false;
+               }
+           }
+           if(c=="p")
+           {   if(cg>100)
+               {
+                 alert("Please Enter a valid Percentage");
+                 return false;
+               }
+           }
+           if(cg>100)
+           {   
+               alert("Please Enter a valid Percentage");
+               return false;
+           }
+           if((s>100)||(h>100))
+           {  
+               alert("Please Enter a valid Percentage");
+               return false;
+           }
+           
+           if( f.indexOf('.pdf') < 0)
+           { 
+              alert("Please Enter a valid pdf file");
+              return false;
+           }
+           return true;
+              
+          }
+  </script>
 <?php
    require_once('db_connect.php');
    
@@ -25,6 +68,7 @@
                $_SESSION['NEXT']=1;
                $_SESSION['FLAG_COURSE']=1;
                $_SESSION['FLAG_STREAM']=1;
+               $_SESSION['NEXT']=1;
             }
             else
             {
@@ -53,59 +97,12 @@
      $_SESSION['MESSAGE']='All Fields Are Mandatory ';
      header("location:index.php?switch=register");
      return;
-   }
-   ?>
-<?php  
+   } 
+
    if($_SESSION['NEXT']==1)
    {
      unset($_SESSION['NEXT']);
-   ?>  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script>
-         function validate()
-  { 
-   var c = document.forms["regform"]["mark"].value;
-   var cg = document.forms["regform"]["c_p"].value;
-   var s = document.forms["regform"]["sslc"].value;
-   var h = document.forms["regform"]["hsc"].value;
-   var f = document.forms["regform"]["file_up"].value;   
-   if(c=="c")
-   {   if(cg>10)
-       {
-         alert("Please Enter a valid CGPA");
-         return false;
-       }
-   }
-   if(c=="p")
-   {   if(cg>100)
-       {
-         alert("Please Enter a valid Percentage");
-         return false;
-       }
-   }
-   if(cg>100)
-   {   
-       alert("Please Enter a valid Percentage");
-       return false;
-   }
-   if((s>100)||(h>100))
-   {  
-       alert("Please Enter a valid Percentage");
-       return false;
-   }
-   
-   if( f.indexOf('.pdf') < 0)
-   { 
-      alert("Please Enter a valid pdf file");
-      return false;
-   }
-   return true;
-      
-  }
-        </script>
-        </script>
-        </script>
-        </script>
+?>  
 <main>
    <center>
       <div class="section"></div>
@@ -213,15 +210,23 @@
                      <div class="colGreenbg btn">
                         <span>Resume</span>
                         <input type="file" name="file_up" required>
-                         
                      </div>
                       <div class="file-path-wrapper">
                         <input class="file-path validate" type="text" name="resume">
                       </div>
                   </div>
-               
                 </div>
-
+                <center>
+                  <div class='row'>
+                    <a  href="https://paytm.com" target="_blank" name='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
+                  </div>
+                </center>
+                <div class="row">
+                  <div class="input-field col s12">
+                     <input id="trans_id" name="trans_id" type="text" class="validate" aria-required="true">
+                     <label for="trans_id" class="">Transaction ID</label>
+                  </div>
+               </div>
       <br />
           <center>
               <div class='row'>
@@ -238,7 +243,7 @@
    }
    else
    {
-     $_SESSION['MESSAGE']='REGISTRATION FAILED';
+     $_SESSION['MESSAGE']='Registration Failed ';
      header("location:index.php?switch=register");
    }
    ?>

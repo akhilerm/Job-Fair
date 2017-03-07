@@ -14,7 +14,9 @@
     if(!empty($_GET['switch']))
     {
     	if($_GET['switch']=='register')
+    	{
         	include("register_view.php");
+       	}
         else if($_GET['switch']=='next')
         	include("register1_view.php");
     }

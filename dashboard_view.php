@@ -475,14 +475,14 @@
                               </tr>
                               <tr>
                                 <td class='colGreen'>Name:</td>
-                                <td>".$row1['name']."</td></tr>
+                                <td>".strtoupper($row1['name'])."</td></tr>
                               <tr>
                                 <td class='colGreen'>Course:</td>
-                                <td>".$row1['course_name']."</td>
+                                <td>".strtoupper($row1['course_name'])."</td>
                               </tr>
                               <tr>
                                 <td class='colGreen'>Stream:</td>
-                                <td>".$row1['stream_name']."</td>
+                                <td>".strtoupper($row1['stream_name'])."</td>
                               </tr>
                               <tr>
                                 <td class='colGreen'>Year Of Pass:</td>
@@ -493,7 +493,7 @@
                               </tr>
                               <tr>
                                 <td class='colGreen'>College:</td>
-                                <td>".$row1['college']."</td>
+                                <td>".strtoupper($row1['college'])."</td>
                               </tr>
                               <tr>
                                 <td class='colGreen'>Phone:</td>
