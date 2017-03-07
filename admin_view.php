@@ -410,7 +410,35 @@ require_once("db_connect.php");
           
                 <div class="row">
                 <?php
-                $query = "SELECT drives.company_id,company.company_name,drives.cgpa,drives.backlog from company,drives where drives.company_id=company.id";
+                $query = "SELECT company.company_name,course.course_name,drives.cgpa,drives.percent,drives.backlog_active from company,drives,course where drives.company_id=company.id and course.id=drives.course_id";
+                $result=$con->query($query);
+                while($row=$query->fetch_assoc()){
+                  ?><div class="col s12 l3">
+                    <div class="card-panel">
+                       <h5 style="text-align:center">?>$row['company_name']<?php</h5>
+                        <hr>
+                        <table>
+                            <tr>
+                                <td>Course</td>
+                                <td>?>$row['course_name']<?php</td>
+                            </tr>
+                             <tr>
+                                <td>CGPA</td>
+                                <td>?>$row['cgpa'] <?php</td>
+                            </tr>
+                             <tr>
+                                <td>Percentage</td>
+                                <td>?>$row['percent'] <?php</td>
+                            </tr>
+                            <tr>
+                                <td>Backlog</td>
+                                <td>?>$row['backlog_active'] <?php</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                  </div><?php
+                }
                 ?>
                   <!-- <div class="col s12 l3">
                     <div class="card-panel">
