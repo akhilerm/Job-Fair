@@ -265,6 +265,7 @@ require_once("db_connect.php");
                              <div class="row">
                               <div class="input-field col s12">
                                  <select style="display: block;border: 1px solid #9e9e9e" name="company3" id="company3">
+                                 	<option value="0" disableselected>Select Company</option>
                                     <?php
                                       $result = get_all_company($con);
                                       while($row=$result->fetch_assoc()){
