@@ -25,10 +25,42 @@ require_once("db_connect.php");
             <li class="tab col s4 l4"><a  href="#test4">Search</a></li>
             <li class="tab col s4 l4"><a  href="#test5">Edit</a></li>
             <li class="tab col s4 l4"><a  href="#test6">Display</a></li>
+            <li class="tab col s4 l4"><a  href="#test7">Transactions</a></li>
               
             
           </ul>
         </div>
+
+        <div id="test7" class="col s12"> 
+
+
+        <?php
+            require_once("db_connect.php");
+            $query="SELECT id,name,college,email,phone,trans_id from user ";
+            $result = $con->query($query);
+            if($result->num_rows>0)
+            {
+              echo "<table class='colGreen driveTable striped'>";
+              echo "<tr>";
+              echo "<th>REG ID</th><th>NAME</th><th>COLLEGE</th><th>EMAIL</th><th>PHONE</th><th>TRANS_ID</th>";
+              echo "</tr>";
+              
+              while($row=$result->fetch_assoc())
+              {
+                echo "<tr>";
+                echo "<td>".$row['id']."</td><td>".$row['name']."</td><td>".$row['college']."</td><td>".$row['email']."</td><td>".$row['phone']."</td><td>".$row['trans_id']."</td><td>";
+                echo "</tr>";
+              }   
+              echo "</table>";
+            }
+            else
+              echo "NO BODY HAS PAID";
+
+?>
+
+        </div>
+
+
         <div id="test1" class="col s12">   
           
                     <table class="driveTable striped centered">
@@ -122,14 +154,14 @@ require_once("db_connect.php");
                     </div>
                      <div class="row">
                       <div class="input-field col s12">
-                         <input id="cgpa" name="cgpa" type="number" class=""  aria-required="true">
+                         <input id="cgpa" name="cgpa" type="number" step="any" class=""  aria-required="true">
                          <label for="cgpa">CGPA</label>
                       </div>
                     </div>
                     
                     <div class="row">
                       <div class="input-field col s12">
-                         <input id="perc" name="perc" type="number" class=""  aria-required="true">
+                         <input id="perc" name="perc" type="number" class="" step="any" aria-required="true">
                          <label for="perc">percentage</label>
                       </div>
                     </div>
