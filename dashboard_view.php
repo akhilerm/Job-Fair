@@ -133,6 +133,7 @@
                         </div>
                         <div class="col s12 l12">
                           <h6>Fresher's or Experienced with Good Command over English</h6>
+                          <br>
                         </div>
                       </div>
                     </div>
@@ -170,7 +171,7 @@
                           <h6>above 65 percentage or 6.5</h6>
                         </div>
                       </div>
-                    </div>Duplicate entry '1234512345' for key 'phone'
+                    </div>
                   </div>
                 </div>
                 <div class="col s12 l3">
@@ -204,6 +205,7 @@
                         <div class="col s12 l12">
                           <h6>70 percentage or above 7.0 cgpa</h6>
                           <br>
+                          <br>
                         </div>
                       </div>
                     </div>
@@ -225,6 +227,8 @@
                           <h6>10000 -20000 per month</h6>
                         </div>
                       </div>
+                       <br>
+
                       <div class="row">
                         <div class="col s12 l12">
                           <h6 class="colGreen">Who can apply</h6>
@@ -233,6 +237,8 @@
                           <h6>All graduates </h6>
                         </div>
                       </div>
+                             <br>
+
                       <div class="row">
                         <div class="col s12 l12">
                           <h6 class="colGreen">Eligibility</h6>
@@ -240,7 +246,8 @@
                         <div class="col s12 l12">
                           <h6>above60 percentage or 6.0 cgpa</h6>
                           <br>
-                        </div>
+                          <br>
+                                           </div>
                       </div>
                     </div>
                   </div>
@@ -254,7 +261,7 @@
                     </div>
                     <div class="card-content">
                       <div class="row">
-                        <h5 class="center-align colGreen">FAZZA Information Technology</h5>
+                        <h5 class="center-align colGreen">Fazza Information Technology</h5>
                         <hr class="style1">
                         <div class="col s12 l12">
                           <h6 class="colGreen">CTC</h6>
@@ -267,10 +274,10 @@
                         <div class="col s12 l12">
                           <h6 class="colGreen">Who can apply</h6>
                         </div>
-                        <div class="col s12 l12">
-                          <h6>For B.tech/M.tech: computer scince ,electronics and communication - Android Developer(2)
+                        <div class="col s12 l12" >
+                          <h6>For B.tech/M.tech: computer scince ,electronics and communication <br><span style="font-size:12px;"> Android Developer(2)
                             Php developers,Asp.Net Developers,Web designers<br>MCA/BCA -Asp.Net Developers <br>Bsc/Msc/Bcom :Jr. Admin Executive
-                            Sales Excutives
+                            Sales Excutives</span>
                           </h6>
                         </div>
                       </div>
@@ -327,7 +334,7 @@
                     </div>
                     <div class="card-content">
                       <div class="row">
-                        <h5 class="center-align colGreen">Cognub Decision Solutions Pvt. Ltd. </h5>
+                        <h5 class="center-align colGreen">COGNUB DECISION SOLUTIONS PVT. LTD. </h5>
                         <hr class="style1">
                         <div class="col s12 l12">
                           <h6 class="colGreen">CTC</h6>
@@ -358,14 +365,14 @@
                   
                   
                   
-                <div class="col s12 l3">
+                        <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/cor.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/mut.jpg" style="border-bottom:1px solid #00d494">
                     </div>
                     <div class="card-content">
                       <div class="row">
-                        <h5 class="center-align colGreen">Corporate360 </h5>
+                        <h5 class="center-align colGreen">MUTHOOT PAPPACHAN TECHNOLOGIES LIMITED </h5>
                         <hr class="style1">
                         <div class="col s12 l12">
                           <h6 class="colGreen">CTC</h6>
@@ -400,14 +407,18 @@
             <!-- Ends here -->
               <div class="row">
                 
-                  <div class="col s12 l3">
+          
+
+
+
+                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/mut.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/cor.jpg" style="border-bottom:1px solid #00d494">
                     </div>
                     <div class="card-content">
                       <div class="row">
-                        <h5 class="center-align colGreen">Muthoot Pappachan Technologies LTD. </h5>
+                        <h5 class="center-align colGreen">Corporate360 </h5>
                         <hr class="style1">
                         <div class="col s12 l12">
                           <h6 class="colGreen">CTC</h6>

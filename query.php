@@ -61,7 +61,7 @@
 		if($user_id==-1)
 		{
 			$query="INSERT INTO user (name,password,course,stream,yop,current_sem,email,college,phone,dob,backlog,cgpa,percent,sslc,hsc,trans_id) values ('$name','$password',$course,$stream,$yop,$current_sem,'$email','$college','$phone','$dob',$backlog,$cgpa,$percent,$sslc,$hsc,'$trans_id')";
-			$result=$con->query($query) or die(mysqli_error());   					//delete             
+			$result=$con->query($query) ;   				            
 			if($result)
 				return get_user_id($email,$con);
 			else
