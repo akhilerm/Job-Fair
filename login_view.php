@@ -46,6 +46,7 @@
                         <a class='colGreen' href="index.php?switch=register" >Create account</a>
                         <br>
                     </form>
+                    
                 </div>
             </div>
         </center>

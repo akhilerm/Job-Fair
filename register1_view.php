@@ -212,13 +212,45 @@
                         <input type="file" name="file_up" required>
                      </div>
                       <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" name="resume">
+                        <input class="file-path validate" type="text" name="resume" placeholder="Resume Should Be a PDF File">
                       </div>
                   </div>
                 </div>
+                
+                <br>
+                <hr class="style1">
+                 
+                      <div class="row colGreen" style="font-weight:lighter;text-align:left;padding-left:19px;">
+                        <ul>
+                            <li>
+                                <h6 style="line-height:1.8em">Registrations fee for job fair is <span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> Rs 200.</span></h6>
+                           
+                          </li>
+                        
+                          <li>
+                            <h6 style="line-height:1.8em">Online Payment can be done  through PAYTM,Offline payments are also accepted. </h6>
+                           
+                          
+                          </li>
+                            <li>
+                            
+                            <h6>Enter the transaction Id after completing the payment through PAYTM </h6>
+                   
+                            
+                            
+                            </li>
+                      
+                       
+                         
+                           
+                          
+                         
+                        </ul>
+                      </div>
+            <hr>
                 <center>
                   <div class='row'>
-                    <label for="btn_pay" class="">Paytm Account Number<br><span> +91 9567016262</span></label>
+                    <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> +91 9567016262 </span> <br><br></h6></label>
                     <a  href="https://paytm.com" target="_blank" name='btn_pay' id='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
                   </div>
                 </center>
