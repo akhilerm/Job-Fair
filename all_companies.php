@@ -1,4 +1,5 @@
 <?php
+//list of students applied for a company
 	require("db_connect.php");
 	session_create();
   if (session_check()==true)
@@ -46,11 +47,13 @@
         }
     	}
     	else{
-           ?><h6>Not Available</h6><?php
+           ?> <h6>Not Available</h6> <?php
     	}
     }
-    header("location:index.php");
+    else
+      header("location:index.php");
   }
-  header("location:index.php");
+  else 
+    header("location:index.php");
 
 ?>

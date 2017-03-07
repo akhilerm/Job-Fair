@@ -193,7 +193,7 @@ require_once("db_connect.php");
                 $('#fill_table').html(html);
               }
               }); 
-          } 
+        } 
 
         function search_edit(){
             var s_id = document.getElementById("s_id").value;
@@ -210,6 +210,17 @@ require_once("db_connect.php");
               }
               });
             }
+        }
+        function export_data(){
+          var exportid = document.getElementById("company4").value;
+          $.ajax({
+            type:'POST',
+            url:'export.php',
+            data:'exportid='+exportid,
+            success:function(){
+              
+            }
+          });
         }
         </script>
         <div id="test3" class="col s12">
@@ -292,6 +303,15 @@ require_once("db_connect.php");
                             <div class="row">
                                  <div class="col s12">
                                               <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" name="search_button" id="search_button" onclick="get_applied()">Search
+                                                <i class="material-icons right">send</i>
+                                              </button> 
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                 <div class="col s12">
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" name="export_button" id="export_button" onclick="export_data()">Export
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>

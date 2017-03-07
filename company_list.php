@@ -1,4 +1,5 @@
 <?php
+//get name of all companies
 	require_once("db_connect.php");
 	require_once("admin_query.php");
 	session_create();
