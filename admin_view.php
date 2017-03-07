@@ -408,39 +408,48 @@ require_once("db_connect.php");
           
           <div id="test6" class="col s12">
           
-                <div class="row">
+                
                 <?php
                 $query = "SELECT company.company_name,course.course_name,drives.cgpa,drives.percent,drives.backlog_active from company,drives,course where drives.company_id=company.id and course.id=drives.course_id";
                 $result=$con->query($query);
+                $i=0;
                 while($row=$result->fetch_assoc()){
+                    if($i==0){
+                      ?>  <div class="row">  <?php
+                    }
+          
                   ?><div class="col s12 l3">
                     <div class="card-panel">
-                       <h5 style="text-align:center"> <?php $row['company_name'] ?> </h5>
+                       <h5 style="text-align:center"> <?php echo $row['company_name']; ?> </h5>
                         <hr>
                         <table>
                             <tr>
                                 <td>Course</td>
-                                <td><?php $row['course_name'] ?> </td>
+                                <td><?php echo $row['course_name']; ?> </td>
                             </tr>
                              <tr>
                                 <td>CGPA</td>
-                                <td> <?php $row['cgpa'] ?> </td>
+                                <td> <?php echo $row['cgpa']; ?> </td>
                             </tr>
                              <tr>
                                 <td>Percentage</td>
-                                <td> <?php $row['percent'] ?> </td>
+                                <td> <?php echo $row['percent']; ?> </td>
                             </tr>
                             <tr>
                                 <td>Backlog</td>
-                                <td> <?php $row['backlog_active'] ?> </td>
+                                <td> <?php echo $row['backlog_active'] ?> </td>
                             </tr>
                             
                         </table>
                     </div>
                   </div><?php
+                    if($i==0){
+                      $i=($i+1)%4; ?>   </div>  <?php
+                    }
+
                 }
                 ?>
-              </div>
+              
         
          </div> 
             
