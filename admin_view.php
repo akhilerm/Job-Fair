@@ -412,7 +412,7 @@ require_once("db_connect.php");
                 <?php
                 $query = "SELECT company.company_name,course.course_name,drives.cgpa,drives.percent,drives.backlog_active from company,drives,course where drives.company_id=company.id and course.id=drives.course_id";
                 $result=$con->query($query);
-                while($row=$query->fetch_assoc()){
+                while($row=$result->fetch_assoc()){
                   ?><div class="col s12 l3">
                     <div class="card-panel">
                        <h5 style="text-align:center"> <?php $row['company_name'] ?> </h5>
