@@ -116,6 +116,10 @@
                             <br>
                           </li>
                           <li>
+                            <h6>Accommodation is provided in campus hostels. For more details,<a href="www.conjura.in/faq.html">Click Here</a></h6>
+                            <br>
+                          </li>
+                          <li>
                             <h6>For Queries:<br>Rahul N R : 9400326063<br>Rahul S Shibu : 8129413503</h6>
                             <br>
                           </li>
