@@ -118,7 +118,7 @@
                             <br>
                           </li>
                           <li>
-                            <h6>Accommodation is provided in campus hostels. For more details,<a href="www.conjura.in/faq.html">Click Here</a></h6>
+                            <h6>Accommodation is provided in campus hostels. For more details,<a href="http://conjura.in/faq.html">Click Here</a></h6>
                             <br>
                           </li>
                           <li>
