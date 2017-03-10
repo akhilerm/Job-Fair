@@ -127,7 +127,12 @@ input:not([type]).validate + label, input[type=text].validate + label, input[typ
     color:  #00D494;
     font-size: 30px;
 }
+  
 
+}
+
+
+    
 }
 
 #stream:focus{
@@ -139,6 +144,7 @@ input:not([type]).validate + label, input[type=text].validate + label, input[typ
 
 .tabs .tab a{
     color: #00d494!important;
+    padding: 0 4px!important;
 }
 .tabs .indicator{
     background-color:  #00d494!important;

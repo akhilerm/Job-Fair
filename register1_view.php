@@ -256,7 +256,7 @@
                 </center>
                 <div class="row">
                   <div class="input-field col s12">
-                     <input id="trans_id" name="trans_id" type="text" class="validate" aria-required="true">
+                     <input id="trans_id" name="trans_id" type="number" class="validate" aria-required="true">
                      <label for="trans_id" class="">Transaction ID</label>
                   </div>
                </div>

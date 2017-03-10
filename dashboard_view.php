@@ -63,6 +63,7 @@
       <main>
         <a href="logout.php" class="logout btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" name="action1" >Logout
         </a> 
+         
         <div class="container-fluid">
           <div class="row" style="margin-top:5px;">
             
@@ -71,6 +72,7 @@
                 <li class="tab col s4 l4"><a class="active" href="#test1">Messages</a></li>
                 <li class="tab col s4 l4"><a  href="#test2">Drive</a></li>
                 <li class="tab col s4 l4"><a  href="#test3">Profile</a></li>
+                 <li class="tab col s4 l4"><a  href="#test4">Payment</a></li>
               </ul>
             </div>
             
@@ -113,6 +115,10 @@
                           </li>
                           <li>
                             <h6>Perfomatix, Cognub, Fazza, Corporate 360 will conduct interview on 17-03-2017 at TKMCE</h6>
+                            <br>
+                          </li>
+                          <li>
+                            <h6>Accommodation is provided in campus hostels. For more details,<a href="www.conjura.in/faq.html">Click Here</a></h6>
                             <br>
                           </li>
                           <li>
@@ -493,6 +499,7 @@
                                 <td class='colGreen'>Phone:</td>
                                 <td>".$row1['phone']."</td>
                               </tr>";
+                              
 
                           }
                           else
@@ -505,6 +512,81 @@
               </div>
             </div>
           </div>
+            <!--profile end-->
+                <div id="test4" class="col s12">
+                    <center>
+            <div class="row">
+               <div class="section"></div>
+      <h5 class="colGreen jobportalHeading">Complete Payment</h5>
+      <div class="section"></div>
+      <div class="container ">
+         <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;width:95%;">
+            <form name="regform" onsubmit="return validate()" class="col s12" method="post" action="register.php" enctype="multipart/form-data">
+               <div class='row'>
+                  <div class='col s12'>
+                     <h5 class="colGreen loginHead">Instructions</h5>
+                  </div>
+               </div>
+               
+                
+              
+               
+                 
+                      <div class="row colGreen" style="font-weight:lighter;text-align:left;padding-left:19px;">
+                        <ul>
+                            <li>
+                                <h6 style="line-height:1.8em">Registrations fee for job fair is <span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> Rs 200.</span></h6>
+                           
+                          </li>
+                        
+                          <li>
+                            <h6 style="line-height:1.8em">Online Payment can be done  through PAYTM,Offline payments are also accepted. </h6>
+                           
+                          
+                          </li>
+                            <li>
+                            
+                            <h6>Enter the Transaction ID after completing the payment through PAYTM </h6>
+                   
+                            
+                            
+                            </li>
+                      
+                       
+                         
+                           
+                          
+                         
+                        </ul>
+                      </div>
+            <hr>
+                <center>
+                  <div class='row'>
+                    <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> +91 9567016262 </span> <br><br></h6></label>
+                    <a  href="https://paytm.com" target="_blank" name='btn_pay' id='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
+                  </div>
+                </center>
+                <div class="row">
+                  <div class="input-field col s12">
+                     <input id="trans_id" name="trans_id" type="number" class="validate" aria-required="true">
+                     <label for="trans_id" class="">Transaction ID</label>
+                  </div>
+               </div>
+      <br />
+          <center>
+              <div class='row'>
+              <button type='submit' onclick='return validate()' name='btn_login' class='col s12 btn btn-large waves-effect colGreenbg'>Register</button>
+              </div>
+          </center>
+      <br>
+      </form>
+      </div>
+      </div>
+            </div>
+                    </center>
+          </div>
+              
+        <!-- end test4-->
         </div>
       </div>
       </main>
