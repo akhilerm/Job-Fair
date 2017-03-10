@@ -195,7 +195,7 @@
                           <h6 class="colGreen">Eligibility</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>above 65 percentage or 6.5</h6>
+                          <h6>above 65 percentage or 6.5<br><br></h6>
                         </div>
                       </div>
                     </div>
@@ -254,7 +254,7 @@
                           <h6>10000 -20000 per month</h6>
                         </div>
                       </div>
-                       <br>
+                      
 
                       <div class="row">
                         <div class="col s12 l12">
@@ -264,7 +264,7 @@
                           <h6>All graduates <br>(2016/17 passouts)</h6>
                         </div>
                       </div>
-                             <br>
+                            
 
                       <div class="row">
                         <div class="col s12 l12">
@@ -389,17 +389,8 @@
                     </div>
                   </div>
                 </div>
-                                 
-                
-              </div>
-                
-            <!-- Ends here -->
-              <div class="row">
-                
-          
-
-
-
+                  
+                  
                  <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
@@ -435,6 +426,21 @@
                     </div>
                   </div>
                 </div>
+                    
+                  
+                  
+                                 
+                
+              </div>
+                
+            <!-- Ends here -->
+              <div class="row">
+                
+          
+
+
+
+               
                     
                 
                 
