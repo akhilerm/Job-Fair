@@ -13,7 +13,7 @@
             $string='';
             if($result)
             {
-              $query="select d.company_id,company_name,backlog_active,cgpa,percent from drives as d, company as c where c.id=d.company_id and d.company_id in (select distinct d.company_id from drives as d, drive_stream as ds where d.company_id=ds.company_id and d.course_id=".$row['course']."  and ds.stream_id=".$row['stream'].") group by company_id";
+              $query="select d.company_id,company_name,backlog_active,cgpa,percent from drives as d, company as c where c.id=d.company_id and d.company_id in (select d.company_id from drives as d, drive_stream as ds where d.company_id=ds.company_id and d.course_id=".$row['course']."  and ds.stream_id=".$row['stream'].") group by company_id";
               $result=$con->query($query);
               if($result->num_rows>0)
               {
@@ -117,7 +117,7 @@
                             <br>
                           </li>
                           <li>
-                            <h6>Accommodation is provided in campus hostels. For more details,<a href="www.conjura.in/faq.html">Click Here</a></h6>
+                            <h6>Accommodation is provided in campus hostels. For more details,<a href="http://conjura.in/faq.html">Click Here</a></h6>
                             <br>
                           </li>
                           <li>
@@ -194,7 +194,7 @@
                           <h6 class="colGreen">Eligibility</h6>
                         </div>
                         <div class="col s12 l12">
-                          <h6>above 65 percentage or 6.5</h6>
+                          <h6>above 65 percentage or 6.5<br><br></h6>
                         </div>
                       </div>
                     </div>
@@ -253,7 +253,6 @@
                           <h6>10000 -20000 per month</h6>
                         </div>
                       </div>
-                       <br>
                       <div class="row">
                         <div class="col s12 l12">
                           <h6 class="colGreen">Who can apply</h6>
@@ -261,8 +260,7 @@
                         <div class="col s12 l12">
                           <h6>All graduates <br>(2016/17 passouts)</h6>
                         </div>
-                      </div>
-                             <br>
+                      </div>                       
                       <div class="row">
                         <div class="col s12 l12">
                           <h6 class="colGreen">Eligibility</h6>
@@ -385,10 +383,7 @@
                       </div>
                     </div>
                   </div>
-                </div>  
-              </div>
-            <!-- Ends here -->
-              <div class="row">
+                </div>
                  <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
@@ -423,8 +418,28 @@
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>   
+                </div>                   
+                  
+                  
+                                 
+                
+              </div>
+                
+            <!-- Ends here -->
+              <div class="row">
+                
+          
+
+
+
+               
+                    
+                
+                
+              </div>
+                
+                
+                  
             <!-- Ends here -->  
             </div>
 
