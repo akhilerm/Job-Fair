@@ -10,7 +10,6 @@
 			{
 				$update_id=cleanup($_POST['update_id'],$con);
 				$query = "UPDATE user set trans_id=".$update_id." where id=".$_SESSION['USER_ID'];
-				echo $query;
 				$result=$con->query($query);
 				header("location:user_account.php");	
 			}
