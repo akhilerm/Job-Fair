@@ -32,6 +32,4 @@
 	{
 		header("location:user_account.php");
 	}
-	
-
 ?>
