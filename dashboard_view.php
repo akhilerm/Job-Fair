@@ -550,7 +550,7 @@
 									            </center>
 									            <div class="row">
 									              <div class="input-field col s12">
-									                <input id="update_id" name="update_id" type="number" class="validate" aria-required="true">
+									                <input id="update_id" name="update_id" type="number" class="validate" aria-required="true" required>
 									                <label for="update_id" class="">Transaction ID</label>
 									              </div>
 									            </div>
