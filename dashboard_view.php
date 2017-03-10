@@ -522,7 +522,7 @@
 											<div class="section"></div>
 									    <div class="container ">
 									      <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;width:95%;">
-									        <form name="regform" onsubmit="return validate()" class="col s12" method="post" action="register.php" enctype="multipart/form-data">
+									        <form name="regform" class="col s12" method="post" action="update_pay.php" >
 									          <div class='row'>
 									            <div class='col s12'>
 									              <h5 class="colGreen loginHead">Instructions</h5>
@@ -550,14 +550,14 @@
 									            </center>
 									            <div class="row">
 									              <div class="input-field col s12">
-									                <input id="trans_id" name="trans_id" type="number" class="validate" aria-required="true">
-									                <label for="trans_id" class="">Transaction ID</label>
+									                <input id="update_id" name="update_id" type="number" class="validate" aria-required="true">
+									                <label for="update_id" class="">Transaction ID</label>
 									              </div>
 									            </div>
 									      			<br />
 										          <center>
 										              <div class='row'>
-										              	<button type='submit' onclick='return validate()' name='btn_login' class='col s12 btn btn-large waves-effect colGreenbg'>Register</button>
+										              	<button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect colGreenbg'>Register</button>
 										              </div>
 										          </center>
 									      			<br>
@@ -568,7 +568,7 @@
 				            }
 				            else
 				            {
-				            	echo "<h5 class='colGreen jobportalHeading'>You Have Already Paid.Your Transaction Id is:".$row['trans_id']."</h5>";
+				            	echo "<h5 class='colGreen jobportalHeading'>You Have Already Paid.Your Transaction ID is:".$row['trans_id']."</h5>";
 				            }
 				          }
 ?>						
@@ -600,7 +600,6 @@ function apply(company_id,count)
         url:'apply.php',
         data:'C_ID='+company_id,
         success:function(html){
-          $(this).attr('disabled', 'disabled');                           //check
           alert(html);
         }
       });
