@@ -1,5 +1,5 @@
 <?php
-	require_once("db_connect.php");
+	/*require_once("db_connect.php");
 	require_once("query.php");
     session_create();
     if(session_check()==true)
@@ -10,23 +10,23 @@
 			{
 				$update_id=cleanup($_POST['update_id'],$con);
 				$query = "UPDATE user set trans_id=".$update_id." where id=".$_SESSION['USER_ID'];
-				echo $query;
-				//$result=$con->query($query);
-				//header("location:user_account.php");	
+				$result=$con->query($query);
+				header("location:user_account.php");	
 			}
 			else
 			{
-				//header("location:user_account.php");
+				header("location:user_account.php");
 			}
 		}
 		else
 		{
-			//header("location:user_account.php");
+			header("location:user_account.php");
 		}
 	}
 	else
 	{
-		//header("location:user_account.php");
-	}
+		header("location:user_account.php");
+	}*/
+	echo "hi";
 
 ?>
