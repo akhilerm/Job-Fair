@@ -250,7 +250,7 @@
             <hr>
                 <center>
                   <div class='row'>
-                    <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> +91 8590363565 </span> <br><br></h6></label>
+                    <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> +91 9400326063 </span> <br><br></h6></label>
                     <a  href="https://paytm.com" target="_blank" name='btn_pay' id='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
                   </div>
                 </center>
