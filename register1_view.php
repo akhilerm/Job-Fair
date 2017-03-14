@@ -216,60 +216,7 @@
                       </div>
                   </div>
                 </div>
-                
                 <br>
-                <hr class="style1">
-                 
-                      <div class="row colGreen" style="font-weight:lighter;text-align:left;padding-left:19px;">
-                        <ul>
-                           
-                                            <h4 style="text-align: center;">Instructions For Payment</h4>
-                                          
-                                            			
-                                         
-
-                            <li>
-                                <h6 style="line-height:1.8em">Registrations fee for job fair is <span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> Rs 200.</span></h6>
-                           
-                          </li>
-                        
-                          <li>
-                            <h6 style="line-height:1.8em">Online Payment can be done  through PAYTM. Offline payments are also accepted. </h6>
-                           
-                          
-                          </li>
-                              <li>
-                                                    <h6><span style="background-color:#00d494;color:white">Step 1&nbsp;</span>&nbsp;Click the Pay Amount button for payment.<h6>
-                                                </li>
-                                                <li>
-                                                    <h6><span style="background-color:#00d494;color:white">Step 2&nbsp;</span>&nbsp;Using your paytm account, transfer (DO NOT RECHARGE) the above mentioned amount to the specified account number.<h6>
-                                                </li>
-                                                <li>
-                                                    <h6><span style="background-color:#00d494;color:white">Step 3&nbsp;</span>&nbsp;Once the transaction is successful,enter the transaction id in the input field provided and click the Register button.<h6>
-                                                </li>
-                                                <li>
-                                                    <h6><span style="background-color:#00d494;color:white">Step 4&nbsp;</span>&nbsp;If the registration is successful, your Conjura Id  will be displayed and will receive a confirmation mail within 48hrs.<h6>
-                                                </li>
-                       
-                         
-                           
-                          
-                         
-                        </ul>
-                      </div>
-            <hr>
-                <center>
-                  <div class='row'>
-                    <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> +91 9400326063 </span> <br><br></h6></label>
-                    <a  href="https://paytm.com" target="_blank" name='btn_pay' id='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
-                  </div>
-                </center>
-                <div class="row">
-                  <div class="input-field col s12">
-                     <input id="trans_id" name="trans_id" type="number" class="validate" aria-required="true">
-                     <label for="trans_id" class="">Transaction ID</label>
-                  </div>
-               </div>
       <br />
           <center>
               <div class='row'>
