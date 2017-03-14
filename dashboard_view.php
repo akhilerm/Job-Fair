@@ -93,7 +93,7 @@
                             <br>
                           </li>
                           <li>
-                            <h6>Online payment is closed. The amount for JobFair can be paid during spot verification.</h6>
+                            <h6>Online payment is closed. Amount of Rs.200 should be paid during spot verification.</h6>
                             <br>
                           </li>
                           <li>
