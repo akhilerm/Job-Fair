@@ -71,6 +71,7 @@
                 <li class="tab col s4 l4"><a class="active" href="#test1">Messages</a></li>
                 <li class="tab col s4 l4"><a  href="#test2">Drive</a></li>
                 <li class="tab col s4 l4"><a  href="#test3">Profile</a></li>
+            <!--     <li class="tab col s4 l4"><a  href="#test4">Payment</a></li>-->
               </ul>
             </div>
             
@@ -504,7 +505,80 @@
 	            </div>
 	          </div>
 	            <!--profile end-->
-
+<!--		        <div id="test4" class="col s12">
+							<center>
+							  <div class="row">
+							    <div class="section"></div>
+-->                  
+<?php
+						/*			$query="select trans_id from user where id=".$_SESSION['USER_ID'];
+									$result=$con->query($query);
+				          if($result->num_rows>0)
+				          {
+				            $row=$result->fetch_assoc();
+				            if(empty($row['trans_id']))
+				            {
+											echo "<h5 class='colGreen jobportalHeading'>Complete Payment</h5>";	
+           */           
+?>
+			<!--								<div class="section"></div>
+									    <div class="container ">
+									      <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;width:95%;">
+									        <form name="regform" class="col s12" method="post" action="update_pay.php" >
+									          <div class='row'>
+									            <div class='col s12'>
+									              <h5 class="colGreen loginHead">Instructions</h5>
+									            </div>
+									  	      </div>
+									          <div class="row colGreen" style="font-weight:lighter;text-align:left;padding-left:19px;">
+									            <ul>
+									              <li>
+									                <h6 style="line-height:1.8em">Registrations fee for job fair is <span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> Rs 200.</span></h6>         
+									              </li>
+									              <li>
+									                <h6 style="line-height:1.8em">TRANSFER(Please do not Recharge) the above mentioned amount using your Paytm account to the below mentioned phone number. </h6>          
+									              </li>
+									              <li> 
+									                <h6>Enter the Transaction ID after completing the payment through PAYTM </h6>
+									              </li>         
+									            </ul>
+									          </div>
+									          <hr>
+									            <center>
+									          	  <div class='row'>
+									                <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> +91 9400326063 </span> <br><br></h6></label>
+									                <a  href="https://paytm.com" target="_blank" name='btn_pay' id='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
+									              </div>
+									            </center>
+									            <div class="row">
+									              <div class="input-field col s12">
+									                <input id="update_id" name="update_id" type="number" class="validate" aria-required="true" required>
+									                <label for="update_id" class="">Transaction ID</label>
+									              </div>
+									            </div>
+									      			<br />
+										          <center>
+										              <div class='row'>
+										              	<button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect colGreenbg'>Register</button>
+										              </div>
+										          </center>
+									      			<br>
+									      	</form>
+									      </div>
+									    </div>   
+  -->                    
+<?php														            	
+				/*            }
+				            else
+				            {
+				            	echo "<h5 class='colGreen jobportalHeading'>You Have Already Paid.Your Transaction ID is:".$row['trans_id']."</h5>";
+				            }
+				          }*/
+?>						
+							  </div>
+					    </center>
+		        </div>          
+		        <!-- end test4-->
     			</div>
       	</div>
       </main>
