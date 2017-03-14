@@ -12,7 +12,7 @@ require_once("db_connect.php");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <main>
-       <a class="logout btn-flat waves-effect waves-light" href = "logout.php" style="border:1px solid #00d494;color:#00d494" window.location="logout.php">Logout
+       <a class="logout btn-flat waves-effect waves-light" href = "logout.php" style="border:1px solid #588c73;color:#588c73" window.location="logout.php">Logout
                 
 </a> 
 
@@ -98,7 +98,7 @@ require_once("db_connect.php");
                                 <label for="first_name">Company Name</label>
                             </div>
                             <div class="col s4">
-                                  <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" id="add_c" type="submit">Add
+                                  <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #588c73;color:#588c73" id="add_c" type="submit">Add
                                     <i class="material-icons right">send</i>
                                   </button> 
                             </div>
@@ -168,7 +168,7 @@ require_once("db_connect.php");
                     
                     <div class="row">
                          <div class="col s12">
-                                      <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="sub_button2  ">Add
+                                      <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #588c73;color:#588c73" type="submit" name="sub_button2  ">Add
                                         <i class="material-icons right">send</i>
                                       </button> 
                         </div>
@@ -295,7 +295,7 @@ require_once("db_connect.php");
                         
                             <div class="row">
                                  <div class="col s12">
-                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action">Add
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #588c73;color:#588c73" type="submit" name="action">Add
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>
@@ -335,7 +335,7 @@ require_once("db_connect.php");
                         
                             <div class="row">
                                  <div class="col s12">
-                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" name="search_button" id="search_button" onclick="get_applied()">Search
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #588c73;color:#588c73" name="search_button" id="search_button" onclick="get_applied()">Search
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>
@@ -344,7 +344,7 @@ require_once("db_connect.php");
 
                             <div class="row">
                                  <div class="col s12">
-                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" name="export_button" id="export_button" onclick="export_data()">Export
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #588c73;color:#588c73" name="export_button" id="export_button" onclick="export_data()">Export
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>
@@ -392,7 +392,7 @@ require_once("db_connect.php");
                         </div>
                             <div class="row">
                                  <div class="col s12">
-                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action" onclick="search_edit()">Search
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #588c73;color:#588c73" type="submit" name="action" onclick="search_edit()">Search
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>
@@ -447,7 +447,7 @@ require_once("db_connect.php");
 
                           <!-- <div class="row">
                                  <div class="col s12">
-                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #00d494;color:#00d494" type="submit" name="action">Apply Changes
+                                              <button class="btn-flat waves-effect waves-light" style="margin-top:22px;border:1px solid #588c73;color:#588c73" type="submit" name="action">Apply Changes
                                                 <i class="material-icons right">send</i>
                                               </button> 
                                 </div>

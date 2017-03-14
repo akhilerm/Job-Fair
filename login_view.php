@@ -18,7 +18,7 @@
                 ?>
             </div>
             <div class="container">
-                <div class="formcard z-depth-1 white  row" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;">
+                <div class="formcard z-depth-1 white  row" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #588c73;border-top: 3px solid #588c73;">
                     <form class="col s12" method="post" action="login.php">
                         <div class='row'>
                             <div class='col s12'>

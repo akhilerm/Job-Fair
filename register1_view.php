@@ -109,7 +109,7 @@
       <h5 class="colGreen jobportalHeading">REGISTRATION</h5>
       <div class="section"></div>
       <div class="container ">
-         <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;width:95%;">
+         <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #588c73;border-top: 3px solid #588c73;width:95%;">
             <form name="regform" onsubmit="return validate()" class="col s12" method="post" action="register.php" enctype="multipart/form-data">
                <div class='row'>
                   <div class='col s12'>
@@ -229,7 +229,7 @@
                                          
 
                             <li>
-                                <h6 style="line-height:1.8em">Registrations fee for job fair is <span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> Rs 200.</span></h6>
+                                <h6 style="line-height:1.8em">Registrations fee for job fair is <span style="background-color:#588c73;color:white;padding:5px;text-align:center;"> Rs 200.</span></h6>
                            
                           </li>
                         
@@ -239,16 +239,16 @@
                           
                           </li>
                               <li>
-                                                    <h6><span style="background-color:#00d494;color:white">Step 1&nbsp;</span>&nbsp;Click the Pay Amount button for payment.<h6>
+                                                    <h6><span style="background-color:#588c73;color:white">Step 1&nbsp;</span>&nbsp;Click the Pay Amount button for payment.<h6>
                                                 </li>
                                                 <li>
-                                                    <h6><span style="background-color:#00d494;color:white">Step 2&nbsp;</span>&nbsp;Using your paytm account, transfer (DO NOT RECHARGE) the above mentioned amount to the specified account number.<h6>
+                                                    <h6><span style="background-color:#588c73;color:white">Step 2&nbsp;</span>&nbsp;Using your paytm account, transfer (DO NOT RECHARGE) the above mentioned amount to the specified account number.<h6>
                                                 </li>
                                                 <li>
-                                                    <h6><span style="background-color:#00d494;color:white">Step 3&nbsp;</span>&nbsp;Once the transaction is successful,enter the transaction id in the input field provided and click the Register button.<h6>
+                                                    <h6><span style="background-color:#588c73;color:white">Step 3&nbsp;</span>&nbsp;Once the transaction is successful,enter the transaction id in the input field provided and click the Register button.<h6>
                                                 </li>
                                                 <li>
-                                                    <h6><span style="background-color:#00d494;color:white">Step 4&nbsp;</span>&nbsp;If the registration is successful, your Conjura Id  will be displayed and will receive a confirmation mail within 48hrs.<h6>
+                                                    <h6><span style="background-color:#588c73;color:white">Step 4&nbsp;</span>&nbsp;If the registration is successful, your Conjura Id  will be displayed and will receive a confirmation mail within 48hrs.<h6>
                                                 </li>
                        
                          
@@ -260,7 +260,7 @@
             <hr>
                 <center>
                   <div class='row'>
-                    <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> +91 9400326063 </span> <br><br></h6></label>
+                    <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#588c73;color:white;padding:5px;text-align:center;"> +91 9400326063 </span> <br><br></h6></label>
                     <a  href="https://paytm.com" target="_blank" name='btn_pay' id='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
                   </div>
                 </center>

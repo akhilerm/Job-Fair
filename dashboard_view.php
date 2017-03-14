@@ -38,7 +38,7 @@
                       $_SESSION['APPLY_FLAG']=1;
                       $_SESSION['COMPANY_ID']=$row_comp['company_id'];
                       $string.='<td>Eligible</td>  
-                      <td> <button class="btn-flat waves-effect waves-light" value="'.$_SESSION["COMPANY_ID"].'" onclick="apply('.$_SESSION["COMPANY_ID"].','.$count.')"  style="border:1px solid #00d494;color:#00d494" type="submit" name="action" id="action">Apply
+                      <td> <button class="btn-flat waves-effect waves-light" value="'.$_SESSION["COMPANY_ID"].'" onclick="apply('.$_SESSION["COMPANY_ID"].','.$count.')"  style="border:1px solid #588c73;color:#588c73" type="submit" name="action" id="action">Apply
                       <i class="material-icons right">send</i>
                       </button> </td> ';
                     }
@@ -61,7 +61,7 @@
             $string.='<div class="card-panel colGreen driveTable"><h6 style="text-align:center">Currently There are No drives</h6></div>';
 ?>
       <main>
-        <a href="logout.php" class="logout btn-flat waves-effect waves-light" style="border:1px solid #00d494;color:#00d494" name="action1" >Logout
+        <a href="logout.php" class="logout btn-flat waves-effect waves-light" style="border:1px solid #588c73;color:#588c73" name="action1" >Logout
         </a> 
          
         <div class="container-fluid">
@@ -132,7 +132,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/ali.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/ali.jpg" style="border-bottom:1px solid #588c73">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -168,7 +168,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/sri.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/sri.jpg" style="border-bottom:1px solid #588c73">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -203,7 +203,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/piv.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/piv.jpg" style="border-bottom:1px solid #588c73">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -240,7 +240,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/too.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/too.jpg" style="border-bottom:1px solid #588c73">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -279,7 +279,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/faz.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/faz.jpg" style="border-bottom:1px solid #588c73">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -317,7 +317,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/per.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/per.jpg" style="border-bottom:1px solid #588c73">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -352,7 +352,7 @@
                 <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/cog.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/cog.jpg" style="border-bottom:1px solid #588c73">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -387,7 +387,7 @@
                  <div class="col s12 l3">
                   <div class="card">
                     <div class="card-image">
-                      <img src="images/cor.jpg" style="border-bottom:1px solid #00d494">
+                      <img src="images/cor.jpg" style="border-bottom:1px solid #588c73">
                     </div>
                     <div class="card-content">
                       <div class="row">
@@ -521,7 +521,7 @@
 ?>
 											<div class="section"></div>
 									    <div class="container ">
-									      <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;width:95%;">
+									      <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #588c73;border-top: 3px solid #588c73;width:95%;">
 									        <form name="regform" class="col s12" method="post" action="update_pay.php" >
 									          <div class='row'>
 									            <div class='col s12'>
@@ -531,7 +531,7 @@
 									          <div class="row colGreen" style="font-weight:lighter;text-align:left;padding-left:19px;">
 									            <ul>
 									              <li>
-									                <h6 style="line-height:1.8em">Registrations fee for job fair is <span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> Rs 200.</span></h6>         
+									                <h6 style="line-height:1.8em">Registrations fee for job fair is <span style="background-color:#588c73;color:white;padding:5px;text-align:center;"> Rs 200.</span></h6>         
 									              </li>
 									              <li>
 									                <h6 style="line-height:1.8em">TRANSFER(Please do not Recharge) the above mentioned amount using your Paytm account to the below mentioned phone number. </h6>          
@@ -544,7 +544,7 @@
 									          <hr>
 									            <center>
 									          	  <div class='row'>
-									                <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#00d494;color:white;padding:5px;text-align:center;"> +91 9400326063 </span> <br><br></h6></label>
+									                <label for="btn_pay" class="colGreen"><h6>PAYTM Account Number<br><br><span style="background-color:#588c73;color:white;padding:5px;text-align:center;"> +91 9400326063 </span> <br><br></h6></label>
 									                <a  href="https://paytm.com" target="_blank" name='btn_pay' id='btn_pay' class='col s12 btn btn-large waves-effect colGreenbg'>Pay Amount</a>
 									              </div>
 									            </center>

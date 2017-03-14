@@ -43,7 +43,7 @@
             ?>
         </div>    
             <div class="container ">
-            <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #00D494;border-top: 3px solid #00D494;width:95%;">
+            <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #588c73;border-top: 3px solid #588c73;width:95%;">
                 <form name="regfrom" onsubmit="return validate()" id="register_form" class="col s12" method="post" action="index.php?switch=next"  >
                     <div class='row'>
                         <div class='col s12'>

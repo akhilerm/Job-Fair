@@ -31,7 +31,7 @@ body {
     width: 88%;
 }
 hr{
-    border-top: 1px solid #00d494;
+    border-top: 1px solid #588c73;
 }
 
 
@@ -39,21 +39,21 @@ nav .brandLogo{
     margin-top: 14px;
     width:280px;
     padding: 0 15px;
-    color:  #00D494;
+    color:  #588c73;
     font-size: 30px;
 }
   .input-field input[type=date]:focus + label,
     .input-field input[type=text]:focus + label,
     .input-field input[type=email]:focus + label,
     .input-field input[type=password]:focus + label {
-      color: #00d494;
+      color: #588c73;
     }
 
     .input-field input[type=date]:focus,
     .input-field input[type=text]:focus,
     .input-field input[type=email]:focus,
     .input-field input[type=password]:focus {
-      border-bottom: 2px solid #00D494;
+      border-bottom: 2px solid #588c73;
       box-shadow: none;
     }
 
@@ -66,17 +66,17 @@ input:not([type]).validate + label, input[type=text].validate + label, input[typ
 .loginHead{
     font-weight: 300;
     padding-bottom: 5px;
-    border-bottom: 1px solid #00D494;
+    border-bottom: 1px solid #588c73;
 }
 .navBar{
     
-    border-bottom: 2px solid #00D494;
+    border-bottom: 2px solid #588c73;
 }
 .colGreen{
-    color: #00D494;
+    color: #588c73;
 }
 .colGreenbg{
-    background-color: #00D494;
+    background-color: #588c73;
     
 }
 .jobportalHeading{
@@ -124,7 +124,7 @@ input:not([type]).validate + label, input[type=text].validate + label, input[typ
         width:200px;
     margin-top: 18px;
      padding: 0 15px;
-    color:  #00D494;
+    color:  #588c73;
     font-size: 30px;
 }
   
@@ -136,18 +136,18 @@ input:not([type]).validate + label, input[type=text].validate + label, input[typ
 }
 
 #stream:focus{
-   border-bottom: 2px solid #00D494;
+   border-bottom: 2px solid #588c73;
 }
 #course:focus{
-     border-bottom: 2px solid #00D494;
+     border-bottom: 2px solid #588c73;
 }
 
 .tabs .tab a{
-    color: #00d494!important;
+    color: #588c73!important;
     padding: 0 4px!important;
 }
 .tabs .indicator{
-    background-color:  #00d494!important;
+    background-color:  #588c73!important;
 }
 .driveTable{
 
