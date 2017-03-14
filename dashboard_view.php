@@ -93,6 +93,10 @@
                             <br>
                           </li>
                           <li>
+                            <h6>Online payment is closed. The amount for JobFair can be paid during spot verification.</h6>
+                            <br>
+                          </li>
+                          <li>
                             <h6>Those who want to attend software companies(except Allianz and Toonz animations) should appear for aptitude test on 16-03-2017.</h6>
                             <br>
                           </li>
