@@ -1,45 +1,20 @@
 <?php
+	require_once("db_connect.php");
 	session_create();
 	if (session_check()==true)
 	{ 
 		if (isset($_SESSION['LoggedINAdmin']))
 		{	
-			$company_id = $_POST['cmpID'];
-    		$select = "SELECT user.name,course.course_name,user.email,user.phone,user.trans_id from course,user,applied where applied.student_id=user.id and course.id=user.course and applied.company_id = $company_id";
-			$export = mysqli_query ($con, $select );
-			$fields = mysqli_num_fields ( $export );
-			for ( $i = 0; $i < $fields; $i++ )
-			{
-			    $header .= mysql_field_name( $export , $i ) . "\t";
-			}
-			while( $row = mysql_fetch_row( $export ) )
-			{
-			    $line = '';
-			    foreach( $row as $value )
-			    {                                            
-			        if ( ( !isset( $value ) ) || ( $value == "" ) )
-			        {
-			            $value = "\t";
-			        }
-			        else
-			        {
-			            $value = str_replace( '"' , '""' , $value );
-			            $value = '"' . $value . '"' . "\t";
-			        }
-			        $line .= $value;
-			    }
-			    $data .= trim( $line ) . "\n";
-			}
-			$data = str_replace( "\r" , "" , $data );
-			if ( $data == "" )
-			{
-			    $data = "\n(0) Records Found!\n";                        
-			}
-			header("Content-type: application/octet-stream");
-			header("Content-Disposition: attachment; filename=export.xls");
-			header("Pragma: no-cache");
-			header("Expires: 0");
-			print "$header\n$data";
+			//$company_id = $_POST['exportid'];
+			//$select = "SELECT user.name, course.course_name,stream.stream_name, user.email,user.phone,user.college,user.cgpa,user.percent,user.sslc,user.hsc,user.trans_id from user,course,stream,applied where applied.student_id = user.id and user.course = course.id and user.stream = stream.id and applied.company_id=$company_id";
+    		header("Content-type: text/csv");
+header("Content-Disposition: attachment; filename=file.csv");
+header("Pragma: no-cache");
+header("Expires: 0");
+
+echo "record1,record2,record3\n";
+
+			
 		}
 		else
 			header("location:index.php");
