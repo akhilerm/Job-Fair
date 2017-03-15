@@ -71,7 +71,7 @@
                 <li class="tab col s4 l4"><a class="active" href="#test1">Messages</a></li>
                 <li class="tab col s4 l4"><a  href="#test2">Drive</a></li>
                 <li class="tab col s4 l4"><a  href="#test3">Profile</a></li>
-                 <li class="tab col s4 l4"><a  href="#test4">Payment</a></li>
+            <!--     <li class="tab col s4 l4"><a  href="#test4">Payment</a></li>-->
               </ul>
             </div>
             
@@ -90,6 +90,10 @@
 
                           <li>
                             <h6>All applicants should report at 8:30AM on 16-03-2017.</h6>
+                            <br>
+                          </li>
+                          <li>
+                            <h6>Online payment is closed. Amount of Rs.200 should be paid during spot verification.</h6>
                             <br>
                           </li>
                           <li>
@@ -505,12 +509,13 @@
 	            </div>
 	          </div>
 	            <!--profile end-->
-		        <div id="test4" class="col s12">
+<!--		        <div id="test4" class="col s12">
 							<center>
 							  <div class="row">
 							    <div class="section"></div>
+-->                  
 <?php
-									$query="select trans_id from user where id=".$_SESSION['USER_ID'];
+						/*			$query="select trans_id from user where id=".$_SESSION['USER_ID'];
 									$result=$con->query($query);
 				          if($result->num_rows>0)
 				          {
@@ -518,8 +523,9 @@
 				            if(empty($row['trans_id']))
 				            {
 											echo "<h5 class='colGreen jobportalHeading'>Complete Payment</h5>";	
+           */           
 ?>
-											<div class="section"></div>
+			<!--								<div class="section"></div>
 									    <div class="container ">
 									      <div class="z-depth-1 white  row formcard" style="display: inline-block; padding: 32px 48px 0px 48px; border-bottom: 3px solid #588c73;border-top: 3px solid #588c73;width:95%;">
 									        <form name="regform" class="col s12" method="post" action="update_pay.php" >
@@ -563,14 +569,15 @@
 									      			<br>
 									      	</form>
 									      </div>
-									    </div>
+									    </div>   
+  -->                    
 <?php														            	
-				            }
+				/*            }
 				            else
 				            {
 				            	echo "<h5 class='colGreen jobportalHeading'>You Have Already Paid.Your Transaction ID is:".$row['trans_id']."</h5>";
 				            }
-				          }
+				          }*/
 ?>						
 							  </div>
 					    </center>
